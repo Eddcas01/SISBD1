@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2fffced4-c859-4fb9-adbd-420dc944cd5b">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tbl_vida.`idCLiente_vd` AS tbl_vida_idCLiente_vd,
+     tbl_vida.`IdAseguradora_vd` AS tbl_vida_IdAseguradora_vd,
+     tbl_vida.`NoPoliza_vd` AS tbl_vida_NoPoliza_vd,
+     tbl_vida.`FechaInicio_vd` AS tbl_vida_FechaInicio_vd,
+     tbl_vida.`FechaFin_vd` AS tbl_vida_FechaFin_vd,
+     tbl_vida.`SumaAsegurada_vd` AS tbl_vida_SumaAsegurada_vd,
+     tbl_vida.`Coberturas_vd` AS tbl_vida_Coberturas_vd,
+     tbl_vida.`DescripcionCobertura_vd` AS tbl_vida_DescripcionCobertura_vd,
+     tbl_vida.`Prima_vd` AS tbl_vida_Prima_vd,
+     tbl_vida.`EstadoPoliza_vd` AS tbl_vida_EstadoPoliza_vd
+FROM
+     `tbl_vida` tbl_vida]]>
+	</queryString>
+	<field name="tbl_vida_idCLiente_vd" class="java.lang.Integer"/>
+	<field name="tbl_vida_IdAseguradora_vd" class="java.lang.Integer"/>
+	<field name="tbl_vida_NoPoliza_vd" class="java.lang.String"/>
+	<field name="tbl_vida_FechaInicio_vd" class="java.sql.Date"/>
+	<field name="tbl_vida_FechaFin_vd" class="java.sql.Date"/>
+	<field name="tbl_vida_SumaAsegurada_vd" class="java.lang.String"/>
+	<field name="tbl_vida_Coberturas_vd" class="java.lang.String"/>
+	<field name="tbl_vida_DescripcionCobertura_vd" class="java.lang.String"/>
+	<field name="tbl_vida_Prima_vd" class="java.lang.String"/>
+	<field name="tbl_vida_EstadoPoliza_vd" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="3647ac2a-0209-4614-86cf-9245055fd6bc"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="6d5cf0b2-4bb7-4c4b-9562-1725d70a3392"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="91df7cd4-14f6-4545-a19b-2c7ef4cf470f"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="bb5e8cd3-28cc-42af-b723-a709b879679c"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="cb669714-de1e-4bbc-a4b0-54ee7ab0b11e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tbl_vida_idCLiente_vd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="55" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5ab88378-17af-4154-bccc-765b29c2a665"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tbl_vida_IdAseguradora_vd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="110" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3370ae95-e880-40ed-afeb-4542c5cd3571"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tbl_vida_NoPoliza_vd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="165" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b18b841d-27b2-44cd-b4da-14e394ead591"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tbl_vida_FechaInicio_vd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="220" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="62b620b6-11ac-404e-84d2-350fd2316e19"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tbl_vida_FechaFin_vd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="275" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="efec7614-a9e0-4647-9e63-9bb84cc5a0bd"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tbl_vida_SumaAsegurada_vd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="330" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="12e6e9d4-91a3-462d-a609-519cfb1c931a"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tbl_vida_Coberturas_vd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="385" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a4bc7d7f-7ca7-4ad7-936f-ff57360288c6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tbl_vida_DescripcionCobertura_vd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="440" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a4240308-992f-4cf4-b6d9-cb8199741465"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tbl_vida_Prima_vd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="495" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="996be6ed-0171-4c2f-8137-3173cf395af0"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tbl_vida_EstadoPoliza_vd]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="f8eb533f-a2c9-44ee-9857-1ad968bb6c40"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="55" height="20" uuid="56de93b3-4cb2-4f92-9c21-63d193c8ca28"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vida_idCLiente_vd}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="55" y="0" width="55" height="20" uuid="6720586d-2f0f-481f-b5df-b79466122506"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vida_IdAseguradora_vd}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="110" y="0" width="55" height="20" uuid="d06df0ea-b34d-4ab2-ab7b-d2cfeb9cd750"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vida_NoPoliza_vd}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="165" y="0" width="55" height="20" uuid="d794c505-5cca-445e-b6fe-3e0b5cb9c649"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vida_FechaInicio_vd}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="0" width="55" height="20" uuid="8d4b25c5-5b3a-4723-9cce-078efe034085"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vida_FechaFin_vd}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="275" y="0" width="55" height="20" uuid="d1a4b7d0-2f42-4d29-bcb6-6be7ee8d08b0"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vida_SumaAsegurada_vd}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="330" y="0" width="55" height="20" uuid="7f10fe6d-bbe7-4c42-977f-32d429d2e90f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vida_Coberturas_vd}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="385" y="0" width="55" height="20" uuid="bf3b97c3-b028-4f56-8d06-390821390d09"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vida_DescripcionCobertura_vd}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="440" y="0" width="55" height="20" uuid="9e8e9035-52f4-4e56-ba77-a5b6491b704f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vida_Prima_vd}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="495" y="0" width="55" height="20" uuid="f892c53e-9609-4a3f-b60b-9b24a782041b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vida_EstadoPoliza_vd}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="d31060d7-c1da-4ab4-ae65-868f0cd409b7"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="972e59d1-7bc1-4450-95d2-4f6a9156be60"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="cd92357e-c76e-444d-b7d4-9ee338663a59"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
