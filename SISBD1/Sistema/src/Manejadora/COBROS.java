@@ -652,7 +652,6 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         jLabel61 = new javax.swing.JLabel();
         jLabel64 = new javax.swing.JLabel();
         jLabel80 = new javax.swing.JLabel();
-        SalirMenuBtn = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         MENU2 = new javax.swing.JPanel();
         jPanel25 = new javax.swing.JPanel();
@@ -889,16 +888,6 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        SalirMenuBtn.setBackground(new java.awt.Color(51, 0, 0));
-        SalirMenuBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        SalirMenuBtn.setForeground(new java.awt.Color(255, 255, 255));
-        SalirMenuBtn.setText("SALIR");
-        SalirMenuBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalirMenuBtnActionPerformed(evt);
-            }
-        });
-
         jLabel12.setBackground(new java.awt.Color(0, 0, 51));
         jLabel12.setFont(new java.awt.Font("Segoe UI Historic", 1, 40)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -914,13 +903,11 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 .addGroup(MENU1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MENU1Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(SalirMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MENU1Layout.createSequentialGroup()
                         .addGap(310, 310, 310)
                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addContainerGap(449, Short.MAX_VALUE))
         );
         MENU1Layout.setVerticalGroup(
             MENU1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -928,9 +915,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 .addGap(24, 24, 24)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addGroup(MENU1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SalirMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(105, Short.MAX_VALUE))
         );
 
@@ -2356,10 +2341,6 @@ switch(menu)
        
     }//GEN-LAST:event_IngresosMenu2BtnActionPerformed
 
-    private void SalirMenuBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirMenuBtnActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_SalirMenuBtnActionPerformed
-
     private void SegVidaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SegVidaBtnActionPerformed
         menu =4;
         Ingresos = 0;
@@ -2721,7 +2702,6 @@ switch(menu)
     public static javax.swing.JTextField PRIMA_COBRO;
     public static javax.swing.JTextField REQ_COBRO;
     private javax.swing.JButton SalirMenu2Btn;
-    private javax.swing.JButton SalirMenuBtn;
     private javax.swing.JButton SegVidaBtn;
     public static javax.swing.JTable TBLC_COBROS;
     public static javax.swing.JTable TBL_CBR;

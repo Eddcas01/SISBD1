@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-09-2018 a las 04:47:37
--- Versión del servidor: 10.1.26-MariaDB
--- Versión de PHP: 7.1.8
+-- Tiempo de generación: 05-11-2018 a las 06:57:15
+-- Versión del servidor: 10.1.36-MariaDB
+-- Versión de PHP: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,9 +33,15 @@ CREATE TABLE `tbl_aseguradora` (
   `Nombre_as` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
   `Nit_as` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL,
   `Direccion_as` text COLLATE utf8mb4_spanish_ci NOT NULL,
-  `Telefonos_as` text COLLATE utf8mb4_spanish_ci NOT NULL,
-  `IdContacto_as` int(20) NOT NULL
+  `Telefonos_as` text COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `tbl_aseguradora`
+--
+
+INSERT INTO `tbl_aseguradora` (`IdAseguradora`, `Nombre_as`, `Nit_as`, `Direccion_as`, `Telefonos_as`) VALUES
+(1, '5', '5', '5', '5');
 
 -- --------------------------------------------------------
 
@@ -76,6 +82,13 @@ CREATE TABLE `tbl_clientes` (
   `TelOficina_clt` varchar(30) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   `TelCelular_clt` varchar(30) COLLATE utf8mb4_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `tbl_clientes`
+--
+
+INSERT INTO `tbl_clientes` (`IdCliente`, `Apellido1_clt`, `Apellido2_clt`, `ApellidoCasada_clt`, `Nombre1_clt`, `Nombre2_clt`, `Nombre3_clt`, `EstadoCivil_clt`, `Dpi_clt`, `FechaNac_clt`, `Edad_clt`, `Profesion_clt`, `DirDomicilio_clt`, `DirCobro_clt`, `Nit_clt`, `TelCasa_clt`, `TelOficina_clt`, `TelCelular_clt`) VALUES
+(138, 'a', 'a', 'a', 'a', 'a', 'a', 'Soltero', '1', '1998-08-08', '5', 'e', '2', '2', '2', '2', '2', '2');
 
 -- --------------------------------------------------------
 
@@ -155,6 +168,13 @@ CREATE TABLE `tbl_contacto_aseguradora` (
   `Cargo_cas` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `tbl_contacto_aseguradora`
+--
+
+INSERT INTO `tbl_contacto_aseguradora` (`Idcontacto`, `NombreCompleto_cas`, `Telefonos_cas`, `Cargo_cas`) VALUES
+(1, 'G', '', 'gg');
+
 -- --------------------------------------------------------
 
 --
@@ -185,7 +205,7 @@ CREATE TABLE `tbl_equipo_electronico` (
 
 CREATE TABLE `tbl_familiares` (
   `IdCliente_fm` int(50) NOT NULL,
-  `IdFamiliar` int(50) NOT NULL,
+  `IdFamiliar` int(20) NOT NULL,
   `NoPoliza_fm` int(50) NOT NULL,
   `FEfectivaInicio_fm` date NOT NULL,
   `FEfectivaFin_fm` date NOT NULL,
@@ -221,18 +241,12 @@ CREATE TABLE `tbl_gastos_medicos` (
   `EstadoPoliza_gm` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `tbl_persona`
+-- Volcado de datos para la tabla `tbl_gastos_medicos`
 --
 
-CREATE TABLE `tbl_persona` (
-  `IdPersona` int(20) NOT NULL,
-  `NombreCompleto_bfo` varchar(200) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `FechaNacimiento_bfo` date NOT NULL,
-  `Dpi_bfo` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+INSERT INTO `tbl_gastos_medicos` (`IdAseguradora_gm`, `IdCliente_gm`, `NoPoliza_gm`, `NoCertificado_gm`, `NombrePlan_gm`, `Cobertura_gm`, `DescripcionCobertura_gm`, `TipoPoliza_gm`, `FechaEfectivaInicio_gm`, `FechaEfectivaFin_gm`, `MaximoVitalicio_gm`, `SumaVida_gm`, `PlanDental_gm`, `EstadoPoliza_gm`) VALUES
+(1, 138, 6, 6, '6', 'C.A.', '', 'Individual', '1998-08-08', '1998-08-08', '5000', '5', 'Inclido', 'Activa');
 
 -- --------------------------------------------------------
 
@@ -333,6 +347,13 @@ CREATE TABLE `tbl_vehiculos` (
   `EstadoPoliza_vhl` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `tbl_vehiculos`
+--
+
+INSERT INTO `tbl_vehiculos` (`IdAseguradora_vhl`, `IdPolizaVhl`, `NoPoliza_vhl`, `NoCertificado_vhl`, `VigenciaInicio_vhl`, `VigeciaFin_vhl`, `Contratante_vhl`, `IdCliente_vhl`, `Asegurado_vhl`, `Direccion_vhl`, `Nit_vhl`, `Marca_vhl`, `Linea_vhl`, `Modelo_vhl`, `Placa_vhl`, `Color_vhl`, `NoChasis_vhl`, `NoMotor_vhl`, `Pasajeros_vhl`, `Tipo_vhl`, `Cobertura_vhl`, `DescripcionCobertura_vhl`, `SumaVehiculo_vhl`, `SumaRC_vhl`, `DeducibleCañosPropios_vhl`, `DeducibleRobo_vhl`, `ConductoresMenores_vhl`, `ConductoresMayores_vhl`, `Tarifa_vhl`, `EstadoPoliza_vhl`) VALUES
+(1, 51, 5, 5, '1998-08-08', '1998-08-08', 'f', 138, 'a a a a', '1', '2', 't', '5', '5', '5', '5', '5', '5', 5, 'Automovil', 'Completo', '	5						', '5', '5', '5', '5', 'Incluido', 'Incluido', '4', 'Activa');
+
 -- --------------------------------------------------------
 
 --
@@ -344,12 +365,20 @@ CREATE TABLE `tbl_vida` (
   `IdAseguradora_vd` int(20) NOT NULL,
   `NoPoliza_vd` int(20) NOT NULL,
   `FechaInicio_vd` date NOT NULL,
+  `FechaFin_vd` date NOT NULL,
   `SumaAsegurada_vd` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
   `Coberturas_vd` text COLLATE utf8mb4_spanish_ci NOT NULL,
   `DescripcionCobertura_vd` text COLLATE utf8mb4_spanish_ci NOT NULL,
   `Prima_vd` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
   `EstadoPoliza_vd` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `tbl_vida`
+--
+
+INSERT INTO `tbl_vida` (`idCLiente_vd`, `IdAseguradora_vd`, `NoPoliza_vd`, `FechaInicio_vd`, `FechaFin_vd`, `SumaAsegurada_vd`, `Coberturas_vd`, `DescripcionCobertura_vd`, `Prima_vd`, `EstadoPoliza_vd`) VALUES
+(138, 1, 5, '1998-08-08', '1998-08-08', '5', '5', '							', '5', 'Activa');
 
 -- --------------------------------------------------------
 
@@ -379,18 +408,8 @@ INSERT INTO `usuarios` (`User`, `Pass`, `Tipo`) VALUES
 -- Indices de la tabla `tbl_aseguradora`
 --
 ALTER TABLE `tbl_aseguradora`
-  ADD PRIMARY KEY (`IdAseguradora`),
-  ADD KEY `IdContacto_inmediato` (`IdContacto_as`);
+  ADD PRIMARY KEY (`IdAseguradora`);
 
---
--- Indices de la tabla `tbl_beneficiarios`
---
-ALTER TABLE `tbl_beneficiarios`
-  ADD PRIMARY KEY (`NoPolizaVd_bfs`),
-  ADD KEY `No_Poliza` (`NoPolizaVd_bfs`),
-  ADD KEY `Id_beneficiario` (`IdBeneficiario_bfs`);
-
---
 -- Indices de la tabla `tbl_clientes`
 --
 ALTER TABLE `tbl_clientes`
@@ -455,12 +474,6 @@ ALTER TABLE `tbl_gastos_medicos`
   ADD KEY `IdAseguradora_Gm` (`IdAseguradora_gm`);
 
 --
--- Indices de la tabla `tbl_persona`
---
-ALTER TABLE `tbl_persona`
-  ADD PRIMARY KEY (`IdPersona`);
-
---
 -- Indices de la tabla `tbl_reclamos_ee`
 --
 ALTER TABLE `tbl_reclamos_ee`
@@ -511,34 +524,54 @@ ALTER TABLE `tbl_vida`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `tbl_aseguradora`
+--
+ALTER TABLE `tbl_aseguradora`
+  MODIFY `IdAseguradora` int(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `tbl_contacto_aseguradora`
+--
+ALTER TABLE `tbl_contacto_aseguradora`
+  MODIFY `Idcontacto` int(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `tbl_familiares`
+--
+ALTER TABLE `tbl_familiares`
+  MODIFY `IdFamiliar` int(20) NOT NULL AUTO_INCREMENT;
+  
+  
+ALTER TABLE `tbl_beneficiarios`
+  MODIFY `IdBeneficiario_bfs` int(20) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `tbl_reclamos_ee`
 --
 ALTER TABLE `tbl_reclamos_ee`
   MODIFY `IdReclamo_ee` int(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `tbl_reclamos_gm`
 --
 ALTER TABLE `tbl_reclamos_gm`
   MODIFY `IdReclamo_gm` int(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `tbl_reclamos_vd`
 --
 ALTER TABLE `tbl_reclamos_vd`
   MODIFY `IdReclamo_vd` int(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `tbl_reclamos_vhl`
 --
 ALTER TABLE `tbl_reclamos_vhl`
   MODIFY `IdReclamo_vhl` int(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `tbl_aseguradora`
---
-ALTER TABLE `tbl_aseguradora`
-  ADD CONSTRAINT `tbl_aseguradora_ibfk_1` FOREIGN KEY (`IdContacto_as`) REFERENCES `tbl_contacto_aseguradora` (`Idcontacto`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `tbl_beneficiarios`
@@ -590,12 +623,6 @@ ALTER TABLE `tbl_familiares`
 ALTER TABLE `tbl_gastos_medicos`
   ADD CONSTRAINT `ASEGURADORA_GM` FOREIGN KEY (`IdAseguradora_gm`) REFERENCES `tbl_aseguradora` (`IdAseguradora`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tbl_gastos_medicos_ibfk_1` FOREIGN KEY (`IdCliente_gm`) REFERENCES `tbl_clientes` (`IdCliente`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `tbl_persona`
---
-ALTER TABLE `tbl_persona`
-  ADD CONSTRAINT `BENEFICIARIO2` FOREIGN KEY (`IdPersona`) REFERENCES `tbl_beneficiarios` (`IdBeneficiario_bfs`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `tbl_reclamos_ee`

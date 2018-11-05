@@ -2385,13 +2385,10 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="453" max="32767" attributes="0"/>
+                      <EmptySpace pref="287" max="32767" attributes="0"/>
                       <Component id="jLabel14" min="-2" pref="595" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="322" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="CVSalirBtn" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
-                          <Component id="CVVolavermenuBtn" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="CVVolavermenuBtn" min="-2" pref="222" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
@@ -2428,24 +2425,16 @@
                               <Component id="CVVolavermenuBtn" min="-2" pref="52" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                              <Component id="CVSalirBtn" min="-2" pref="52" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CVBusquedaTxt" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
-                                  <Component id="CVBusquedaCbx" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CVLimpiarBtn" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                                  <Component id="CVBuscarBtn" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="CVBusquedaTxt" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
+                          <Component id="CVBusquedaCbx" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="CVLimpiarBtn" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="CVBuscarBtn" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="jScrollPane3" min="-2" pref="383" max="-2" attributes="0"/>
                       <EmptySpace pref="116" max="32767" attributes="0"/>
                   </Group>
@@ -2550,23 +2539,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CVBuscarBtnActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="CVSalirBtn">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="33" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Historic" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="SALIR"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CVSalirBtnActionPerformed"/>
               </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane3">

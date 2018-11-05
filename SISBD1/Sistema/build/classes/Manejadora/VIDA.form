@@ -36,8 +36,8 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
               <Component id="VIDA" min="-2" pref="1525" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -801,7 +801,6 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="IGMvolverBtn1" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
                                   <Component id="IGMAtrasBtn1" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
-                                  <Component id="IGMSalirBtn1" min="-2" pref="222" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -824,8 +823,6 @@
                               <Component id="IGMvolverBtn1" min="-2" pref="52" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="IGMAtrasBtn1" min="-2" pref="52" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="IGMSalirBtn1" min="-2" pref="52" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jPanel44" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -1371,23 +1368,6 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="IGMSalirBtn1">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="33" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Historic" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="SALIR"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IGMSalirBtn1ActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JButton" name="IGMvolverBtn1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1788,10 +1768,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="CGMSalirbtn1" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
-                          <Component id="CGMVolverBtn1" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="CGMVolverBtn1" min="-2" pref="222" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -1828,24 +1805,16 @@
                       <Component id="jLabel91" min="-2" pref="80" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="CGMVolverBtn1" min="-2" pref="52" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                              <Component id="CGMSalirbtn1" min="-2" pref="52" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="BUSCAR_VD" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
-                                  <Component id="COMBO_VD" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CGMLimpiarBtn1" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                                  <Component id="CGMBuscarbtn1" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="BUSCAR_VD" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
+                          <Component id="COMBO_VD" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="CGMLimpiarBtn1" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="CGMBuscarbtn1" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="jScrollPane24" pref="350" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="198" max="-2" attributes="0"/>
                   </Group>
@@ -1952,23 +1921,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CGMBuscarbtn1ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="CGMSalirbtn1">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="33" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Historic" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="SALIR"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CGMSalirbtn1ActionPerformed"/>
-              </Events>
-            </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane24">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -2062,12 +2014,9 @@
                           <Component id="jLabel94" alignment="0" min="-2" pref="543" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="CGMSalirBtn2" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="CGM2AtrasBtn2" alignment="0" max="32767" attributes="0"/>
-                              <Component id="CGM2VolverBtn2" alignment="0" pref="222" max="32767" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="CGM2AtrasBtn2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="CGM2VolverBtn2" alignment="0" pref="222" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
                   </Group>
@@ -2082,8 +2031,6 @@
                               <Component id="CGM2VolverBtn2" min="-2" pref="52" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="CGM2AtrasBtn2" min="-2" pref="52" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                              <Component id="CGMSalirBtn2" min="-2" pref="52" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
@@ -2165,23 +2112,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CGM2AtrasBtn2ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="CGMSalirBtn2">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="33" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Historic" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="SALIR"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CGMSalirBtn2ActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel96">
@@ -2368,12 +2298,9 @@
                                   <Component id="jScrollPane11" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace pref="64" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="CGMSalirBtn1" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="CGM2AtrasBtn1" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="CGM2VolverBtn1" alignment="0" pref="222" max="32767" attributes="0"/>
-                                  </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="CGM2AtrasBtn1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="CGM2VolverBtn1" alignment="0" pref="222" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
                           </Group>
@@ -2411,13 +2338,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                              <Component id="CGMSalirBtn1" min="-2" pref="52" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jScrollPane10" alignment="0" min="-2" pref="181" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jScrollPane10" min="-2" pref="181" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel85" min="-2" pref="66" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -2485,23 +2406,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CGM2AtrasBtn1ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="CGMSalirBtn1">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="33" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Historic" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="SALIR"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CGMSalirBtn1ActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel82">

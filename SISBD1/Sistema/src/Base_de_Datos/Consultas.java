@@ -427,7 +427,7 @@ public class Consultas {
        modelo1.addColumn("POLIZA");  
        modelo1.addColumn("INFORMACION");
  
-       String sql ="SELECT * FROM tbl_vehiculos WHERE idPolizaVhl='"+Id+"'";
+       String sql ="SELECT * FROM tbl_vehiculos WHERE NoPoliza_vhl='"+Id+"'";
        String datos[] = new String[2];
        Statement st;
         try {
@@ -478,7 +478,7 @@ public class Consultas {
        modelo1.addColumn("COBERTURA");  
        modelo1.addColumn("INFORMACION");
  
-       String sql ="SELECT * FROM tbl_vehiculos WHERE IdPolizaVhl="+Id+"";
+       String sql ="SELECT * FROM tbl_vehiculos WHERE NoPoliza_vhl="+Id+"";
        String datos[] = new String[2];
        Statement st;
         try {
@@ -824,7 +824,7 @@ public class Consultas {
        modelo1.addColumn("Parentesco");
        
        
-       String sql ="SELECT * FROM tbl_beneficiarios WHERE NoPolizaVd_bfo="+nopol+"";
+       String sql ="SELECT * FROM tbl_beneficiarios WHERE NoPolizaVd_bfs="+nopol+"";
        String datos[] = new String[6];
        Statement st;
         try {
@@ -832,11 +832,11 @@ public class Consultas {
             ResultSet rs = st.executeQuery(sql);
             while(rs.next()){
            
-             datos[0]= rs.getString(1);
-             datos[1]= rs.getString(2);
+             datos[0]= rs.getString(2);
+             datos[1]= rs.getString(1);
              datos[2]= rs.getString(3);
-             datos[3]= rs.getString(4);
-             datos[4]= rs.getString(5);
+             datos[3]= rs.getString(5);
+             datos[4]= rs.getString(4);
              datos[5]= rs.getString(6);
 
             modelo1.addRow(datos);

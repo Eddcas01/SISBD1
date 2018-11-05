@@ -387,7 +387,6 @@ public class VEHICULOS extends javax.swing.JInternalFrame {
         CVVolavermenuBtn = new javax.swing.JButton();
         CVLimpiarBtn = new javax.swing.JButton();
         CVBuscarBtn = new javax.swing.JButton();
-        CVSalirBtn = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         TblCV1 = new javax.swing.JTable();
         C_VEHICULOS2 = new javax.swing.JPanel();
@@ -1614,16 +1613,6 @@ public class VEHICULOS extends javax.swing.JInternalFrame {
             }
         });
 
-        CVSalirBtn.setBackground(new java.awt.Color(51, 0, 0));
-        CVSalirBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CVSalirBtn.setForeground(new java.awt.Color(255, 255, 255));
-        CVSalirBtn.setText("SALIR");
-        CVSalirBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CVSalirBtnActionPerformed(evt);
-            }
-        });
-
         TblCV1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         TblCV1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         TblCV1.setModel(new javax.swing.table.DefaultTableModel(
@@ -1652,12 +1641,10 @@ public class VEHICULOS extends javax.swing.JInternalFrame {
         C_VEHICULOS1Layout.setHorizontalGroup(
             C_VEHICULOS1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, C_VEHICULOS1Layout.createSequentialGroup()
-                .addContainerGap(453, Short.MAX_VALUE)
+                .addContainerGap(287, Short.MAX_VALUE)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(322, 322, 322)
-                .addGroup(C_VEHICULOS1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CVSalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CVVolavermenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(CVVolavermenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(85, 85, 85))
             .addGroup(C_VEHICULOS1Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
@@ -1684,19 +1671,14 @@ public class VEHICULOS extends javax.swing.JInternalFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, C_VEHICULOS1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(CVVolavermenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(C_VEHICULOS1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(C_VEHICULOS1Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(CVSalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(C_VEHICULOS1Layout.createSequentialGroup()
-                        .addGroup(C_VEHICULOS1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CVBusquedaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CVBusquedaCbx, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(C_VEHICULOS1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CVLimpiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CVBuscarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(C_VEHICULOS1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CVBusquedaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CVBusquedaCbx, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+                .addGroup(C_VEHICULOS1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CVLimpiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CVBuscarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(116, Short.MAX_VALUE))
         );
@@ -2056,7 +2038,8 @@ public class VEHICULOS extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_CV2CoberturasyCobBtnActionPerformed
 
     private void TblCV1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TblCV1MouseClicked
-        int fila  = TblCV1.getSelectedRow();String Id;
+        int fila  = TblCV1.getSelectedRow();
+        String Id;
         if (fila>=0){
             Id = valueOf(TblCV1.getValueAt(fila, 1));
             consulta.cv2(Id);
@@ -2065,10 +2048,6 @@ public class VEHICULOS extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO CLIENTE");
         }
     }//GEN-LAST:event_TblCV1MouseClicked
-
-    private void CVSalirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CVSalirBtnActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CVSalirBtnActionPerformed
 
     private void CVBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CVBuscarBtnActionPerformed
         src.Buscar2(src.Campo3(CVBusquedaCbx.getSelectedItem().toString()),CVBusquedaTxt.getText());
@@ -2284,7 +2263,6 @@ public class VEHICULOS extends javax.swing.JInternalFrame {
     private javax.swing.JButton CVElimBtn1;
     private javax.swing.JButton CVLimpiarBtn;
     private javax.swing.JButton CVModBtn1;
-    private javax.swing.JButton CVSalirBtn;
     private javax.swing.JButton CVVolavermenuBtn;
     private javax.swing.JPanel C_CLIENTES1;
     private javax.swing.JPanel C_CLIENTES2;

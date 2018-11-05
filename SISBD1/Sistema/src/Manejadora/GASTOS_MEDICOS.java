@@ -1964,7 +1964,7 @@ if(IGMAseguradoraTxt.getText().equals("") || IGMNoPolizaTxt.getText().equals("")
     }//GEN-LAST:event_limpiar8ActionPerformed
 
     private void IGMConyugueBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IGMConyugueBtnActionPerformed
-        GM.setSelectedIndex(1);
+        GM.setSelectedIndex(5);
     }//GEN-LAST:event_IGMConyugueBtnActionPerformed
 
     private void limpiar9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiar9ActionPerformed

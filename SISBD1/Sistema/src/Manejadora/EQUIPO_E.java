@@ -320,7 +320,6 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
         jLabel80 = new javax.swing.JLabel();
         FACT_EE = new javax.swing.JTextField();
         DEDUCIBLE_EE = new javax.swing.JTextField();
-        IGMSalirBtn = new javax.swing.JButton();
         IGMvolverBtn = new javax.swing.JButton();
         IGMAtrasBtn = new javax.swing.JButton();
         C_GM1 = new javax.swing.JPanel();
@@ -329,14 +328,13 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
         BUSCAR_EE = new javax.swing.JTextField();
         CGMLimpiarBtn = new javax.swing.JButton();
         CGMBuscarbtn = new javax.swing.JButton();
-        CGMSalirbtn = new javax.swing.JButton();
         jScrollPane12 = new javax.swing.JScrollPane();
         TBL_EE = new javax.swing.JTable();
+        CGM2VolverBtn2 = new javax.swing.JButton();
         C_GM2 = new javax.swing.JPanel();
         jLabel68 = new javax.swing.JLabel();
         CGM2VolverBtn = new javax.swing.JButton();
         CGM2AtrasBtn = new javax.swing.JButton();
-        CGMSalirBtn = new javax.swing.JButton();
         jLabel69 = new javax.swing.JLabel();
         CV2CoberturasyCobBtn1 = new javax.swing.JButton();
         jScrollPane9 = new javax.swing.JScrollPane();
@@ -350,7 +348,6 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
         jLabel81 = new javax.swing.JLabel();
         CGM2VolverBtn1 = new javax.swing.JButton();
         CGM2AtrasBtn1 = new javax.swing.JButton();
-        CGMSalirBtn1 = new javax.swing.JButton();
         jLabel82 = new javax.swing.JLabel();
         jScrollPane10 = new javax.swing.JScrollPane();
         TBL_EE3 = new javax.swing.JTable();
@@ -522,7 +519,7 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
             .addGroup(MENU2Layout.createSequentialGroup()
                 .addGap(76, 76, 76)
                 .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, 1197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(254, Short.MAX_VALUE))
+                .addContainerGap(425, Short.MAX_VALUE))
         );
         MENU2Layout.setVerticalGroup(
             MENU2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -626,14 +623,15 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
         C_CLIENTES1Layout.setHorizontalGroup(
             C_CLIENTES1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, C_CLIENTES1Layout.createSequentialGroup()
-                .addContainerGap(303, Short.MAX_VALUE)
+                .addContainerGap(474, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(374, 374, 374)
-                .addComponent(CcltSalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(85, 85, 85))
+                .addGap(681, 681, 681))
             .addGroup(C_CLIENTES1Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
                 .addGroup(C_CLIENTES1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(C_CLIENTES1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(C_CLIENTES1Layout.createSequentialGroup()
                         .addGroup(C_CLIENTES1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Cclt1BusquedaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -641,31 +639,33 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(C_CLIENTES1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Cclt1ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CcltLimpiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(CcltLimpiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(CcltSalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(112, 112, 112))))
         );
         C_CLIENTES1Layout.setVerticalGroup(
             C_CLIENTES1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(C_CLIENTES1Layout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
                 .addGroup(C_CLIENTES1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(C_CLIENTES1Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(CcltSalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(C_CLIENTES1Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
                         .addGroup(C_CLIENTES1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Cclt1BusquedaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Cclt1ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(C_CLIENTES1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(CcltLimpiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CcltBuscarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
-                .addGap(141, 141, 141))
+                            .addComponent(CcltBuscarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                        .addGap(141, 141, 141))
+                    .addGroup(C_CLIENTES1Layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(CcltSalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         EQUIPO.addTab("C. CLIENTES 1", C_CLIENTES1);
@@ -731,7 +731,7 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
                 .addGroup(C_CLIENTES2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(C_CLIENTES2Layout.createSequentialGroup()
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 386, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 557, Short.MAX_VALUE)
                         .addComponent(Cclt2SalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(256, 256, 256))
                     .addGroup(C_CLIENTES2Layout.createSequentialGroup()
@@ -1066,16 +1066,6 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
                 .addGap(94, 94, 94))
         );
 
-        IGMSalirBtn.setBackground(new java.awt.Color(51, 0, 0));
-        IGMSalirBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        IGMSalirBtn.setForeground(new java.awt.Color(255, 255, 255));
-        IGMSalirBtn.setText("SALIR");
-        IGMSalirBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IGMSalirBtnActionPerformed(evt);
-            }
-        });
-
         IGMvolverBtn.setBackground(new java.awt.Color(0, 0, 0));
         IGMvolverBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         IGMvolverBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -1106,14 +1096,13 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
                         .addGap(107, 107, 107)
                         .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(I_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(IGMSalirBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(I_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(IGMvolverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(IGMAtrasBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(I_GM1Layout.createSequentialGroup()
                         .addGap(388, 388, 388)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
         I_GM1Layout.setVerticalGroup(
             I_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1125,9 +1114,7 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
                     .addGroup(I_GM1Layout.createSequentialGroup()
                         .addComponent(IGMvolverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(IGMAtrasBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(88, 88, 88)
-                        .addComponent(IGMSalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(IGMAtrasBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
@@ -1175,16 +1162,6 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
             }
         });
 
-        CGMSalirbtn.setBackground(new java.awt.Color(51, 0, 0));
-        CGMSalirbtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CGMSalirbtn.setForeground(new java.awt.Color(255, 255, 255));
-        CGMSalirbtn.setText("SALIR");
-        CGMSalirbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CGMSalirbtnActionPerformed(evt);
-            }
-        });
-
         TBL_EE.setBackground(new java.awt.Color(0, 0, 51));
         TBL_EE.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         TBL_EE.setForeground(new java.awt.Color(255, 255, 255));
@@ -1212,51 +1189,64 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
         });
         jScrollPane12.setViewportView(TBL_EE);
 
+        CGM2VolverBtn2.setBackground(new java.awt.Color(0, 0, 0));
+        CGM2VolverBtn2.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        CGM2VolverBtn2.setForeground(new java.awt.Color(255, 255, 255));
+        CGM2VolverBtn2.setText("VOLVER A MENÚ");
+        CGM2VolverBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CGM2VolverBtn2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout C_GM1Layout = new javax.swing.GroupLayout(C_GM1);
         C_GM1.setLayout(C_GM1Layout);
         C_GM1Layout.setHorizontalGroup(
             C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(C_GM1Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(C_GM1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 1070, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(C_GM1Layout.createSequentialGroup()
                         .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BUSCAR_EE, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CGMBuscarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(COMBO_EE, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CGMLimpiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(372, 372, 372)
-                        .addComponent(CGMSalirbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, C_GM1Layout.createSequentialGroup()
-                .addContainerGap(80, Short.MAX_VALUE)
-                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 1070, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(377, Short.MAX_VALUE))
+                            .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(C_GM1Layout.createSequentialGroup()
+                                .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(BUSCAR_EE, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(CGMBuscarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(C_GM1Layout.createSequentialGroup()
+                                        .addComponent(COMBO_EE, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(594, 594, 594))
+                                    .addComponent(CGMLimpiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                        .addComponent(CGM2VolverBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(270, 270, 270))))
         );
         C_GM1Layout.setVerticalGroup(
             C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(C_GM1Layout.createSequentialGroup()
                 .addGap(66, 66, 66)
                 .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
                 .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(C_GM1Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
                         .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(BUSCAR_EE, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(COMBO_EE, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CGMLimpiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CGMBuscarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(COMBO_EE, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(C_GM1Layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(CGMSalirbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(48, 48, 48)
-                .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
-                .addContainerGap(121, Short.MAX_VALUE))
+                        .addGap(8, 8, 8)
+                        .addComponent(CGM2VolverBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CGMLimpiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CGMBuscarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(81, 81, 81)
+                .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                .addGap(101, 101, 101))
         );
 
         EQUIPO.addTab("C EQUIPO E", C_GM1);
@@ -1287,16 +1277,6 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
         CGM2AtrasBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CGM2AtrasBtnActionPerformed(evt);
-            }
-        });
-
-        CGMSalirBtn.setBackground(new java.awt.Color(51, 0, 0));
-        CGMSalirBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CGMSalirBtn.setForeground(new java.awt.Color(255, 255, 255));
-        CGMSalirBtn.setText("SALIR");
-        CGMSalirBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CGMSalirBtnActionPerformed(evt);
             }
         });
 
@@ -1393,11 +1373,9 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
                             .addComponent(CGMModBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(CGMElimBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(39, 39, 39)))
-                .addGroup(C_GM2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CGMSalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(C_GM2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(CGM2AtrasBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CGM2VolverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(C_GM2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CGM2AtrasBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CGM2VolverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(412, 412, 412))
         );
         C_GM2Layout.setVerticalGroup(
@@ -1416,9 +1394,7 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
                         .addComponent(CGM2VolverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(CGM2AtrasBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(CGMSalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
+                        .addGap(93, 93, 93)
                         .addComponent(CV2CoberturasyCobBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1463,16 +1439,6 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
             }
         });
 
-        CGMSalirBtn1.setBackground(new java.awt.Color(51, 0, 0));
-        CGMSalirBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CGMSalirBtn1.setForeground(new java.awt.Color(255, 255, 255));
-        CGMSalirBtn1.setText("SALIR");
-        CGMSalirBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CGMSalirBtn1ActionPerformed(evt);
-            }
-        });
-
         jLabel82.setBackground(new java.awt.Color(204, 102, 0));
         jLabel82.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
         jLabel82.setForeground(new java.awt.Color(255, 255, 255));
@@ -1510,12 +1476,10 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
                 .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 857, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
-                .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CGMSalirBtn1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(CGM2AtrasBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CGM2VolverBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 242, Short.MAX_VALUE)
+                .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CGM2AtrasBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CGM2VolverBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE))
                 .addGap(174, 174, 174))
         );
         C_GM3Layout.setVerticalGroup(
@@ -1534,9 +1498,7 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CGMSalirBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(325, Short.MAX_VALUE))
         );
 
@@ -1597,15 +1559,15 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_IngresosMenu2BtnActionPerformed
 
     private void EliminarMenu2BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarMenu2BtnActionPerformed
-        EQUIPO.setSelectedIndex(5);
+        EQUIPO.setSelectedIndex(4);
     }//GEN-LAST:event_EliminarMenu2BtnActionPerformed
 
     private void ConsultaMenu2BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaMenu2BtnActionPerformed
-        EQUIPO.setSelectedIndex(5);
+        EQUIPO.setSelectedIndex(4);
     }//GEN-LAST:event_ConsultaMenu2BtnActionPerformed
 
     private void ModificacionMenu2BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificacionMenu2BtnActionPerformed
-        EQUIPO.setSelectedIndex(5);
+        EQUIPO.setSelectedIndex(4);
     }//GEN-LAST:event_ModificacionMenu2BtnActionPerformed
 
     private void Cclt2SalirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cclt2SalirBtnActionPerformed
@@ -1688,10 +1650,6 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
         } 
     }//GEN-LAST:event_limpiar9ActionPerformed
 
-    private void IGMSalirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IGMSalirBtnActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_IGMSalirBtnActionPerformed
-
     private void IGMvolverBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IGMvolverBtnActionPerformed
         EQUIPO.setSelectedIndex(0);
     }//GEN-LAST:event_IGMvolverBtnActionPerformed
@@ -1712,10 +1670,6 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
         src.Busquedaee(Campo6(COMBO_EE.getSelectedItem().toString()),BUSCAR_EE.getText());
     }//GEN-LAST:event_CGMBuscarbtnActionPerformed
 
-    private void CGMSalirbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGMSalirbtnActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CGMSalirbtnActionPerformed
-
     private void TBL_EEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TBL_EEMouseClicked
         int fila  = TBL_EE.getSelectedRow(); String Id;
         if (fila>=0){
@@ -1730,14 +1684,6 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
     private void CGM2VolverBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2VolverBtnActionPerformed
         EQUIPO.setSelectedIndex(0);
     }//GEN-LAST:event_CGM2VolverBtnActionPerformed
-
-    private void CGM2AtrasBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2AtrasBtnActionPerformed
-        EQUIPO.setSelectedIndex(4);
-    }//GEN-LAST:event_CGM2AtrasBtnActionPerformed
-
-    private void CGMSalirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGMSalirBtnActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CGMSalirBtnActionPerformed
 
     private void CV2CoberturasyCobBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV2CoberturasyCobBtn1ActionPerformed
         int fila  = TBL_EE.getSelectedRow();
@@ -1792,10 +1738,6 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
         EQUIPO.setSelectedIndex(5);
     }//GEN-LAST:event_CGM2AtrasBtn1ActionPerformed
 
-    private void CGMSalirBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGMSalirBtn1ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CGMSalirBtn1ActionPerformed
-
     private void formInternalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameDeiconified
         this.setSize(1542, 820);
     }//GEN-LAST:event_formInternalFrameDeiconified
@@ -1803,6 +1745,14 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
     private void formInternalFrameIconified(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameIconified
           this.setSize(250, 40);
     }//GEN-LAST:event_formInternalFrameIconified
+
+    private void CGM2AtrasBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2AtrasBtnActionPerformed
+        EQUIPO.setSelectedIndex(4);
+    }//GEN-LAST:event_CGM2AtrasBtnActionPerformed
+
+    private void CGM2VolverBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2VolverBtn2ActionPerformed
+       EQUIPO.setSelectedIndex(0);
+    }//GEN-LAST:event_CGM2VolverBtn2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1814,13 +1764,11 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
     private javax.swing.JButton CGM2AtrasBtn1;
     private javax.swing.JButton CGM2VolverBtn;
     private javax.swing.JButton CGM2VolverBtn1;
+    private javax.swing.JButton CGM2VolverBtn2;
     private javax.swing.JButton CGMBuscarbtn;
     private javax.swing.JButton CGMElimBtn;
     private javax.swing.JButton CGMLimpiarBtn;
     private javax.swing.JButton CGMModBtn;
-    private javax.swing.JButton CGMSalirBtn;
-    private javax.swing.JButton CGMSalirBtn1;
-    private javax.swing.JButton CGMSalirbtn;
     public static javax.swing.JComboBox<String> COMBO_EE;
     private javax.swing.JButton CV2CoberturasyCobBtn1;
     private javax.swing.JPanel C_CLIENTES1;
@@ -1847,7 +1795,6 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
     public static javax.swing.JTextField FINICIO_EE;
     public static javax.swing.JTextField IDAS_EE;
     private javax.swing.JButton IGMAtrasBtn;
-    private javax.swing.JButton IGMSalirBtn;
     private javax.swing.JButton IGMvolverBtn;
     private javax.swing.JPanel I_GM1;
     private javax.swing.JButton IngresosMenu2Btn;

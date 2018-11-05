@@ -282,8 +282,8 @@ public class Ingresos {
       public void ingresoBeneficiarios(String NoPol)
       {
            try {
-                PreparedStatement pps = cne.prepareStatement("INSERT INTO tbl_beneficiarios(NoPolizaVd_bfo,Nombre_bfo,FechaNac_bfo,Dpi_bfo,"
-                +"Parentesco_bfo) VALUES(?,?,?,?,?)");
+                PreparedStatement pps = cne.prepareStatement("INSERT INTO tbl_beneficiarios(NoPolizaVd_bfs,Nombre_bfs,FechaNac_bfs,Dpi_bfs,"
+                +"Parentesco_bfs) VALUES(?,?,?,?,?)");
                 pps.setString(1, NoPol);
                 pps.setString(2, Manejadora.VIDA.NOMBRE_BFO.getText());
                 pps.setString(3, Manejadora.VIDA.FNAC_BFO.getText());

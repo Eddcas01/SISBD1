@@ -305,7 +305,6 @@ public class VIDA extends javax.swing.JInternalFrame {
         DESCCOBRETURAS_VD = new javax.swing.JTextArea();
         limpiar11 = new javax.swing.JButton();
         COBERTURA_VD = new javax.swing.JTextField();
-        IGMSalirBtn1 = new javax.swing.JButton();
         IGMvolverBtn1 = new javax.swing.JButton();
         IGMAtrasBtn1 = new javax.swing.JButton();
         I_GM2 = new javax.swing.JPanel();
@@ -328,14 +327,12 @@ public class VIDA extends javax.swing.JInternalFrame {
         CGMVolverBtn1 = new javax.swing.JButton();
         CGMLimpiarBtn1 = new javax.swing.JButton();
         CGMBuscarbtn1 = new javax.swing.JButton();
-        CGMSalirbtn1 = new javax.swing.JButton();
         jScrollPane24 = new javax.swing.JScrollPane();
         TBL_VD = new javax.swing.JTable();
         jPanel46 = new javax.swing.JPanel();
         jLabel94 = new javax.swing.JLabel();
         CGM2VolverBtn2 = new javax.swing.JButton();
         CGM2AtrasBtn2 = new javax.swing.JButton();
-        CGMSalirBtn2 = new javax.swing.JButton();
         jLabel96 = new javax.swing.JLabel();
         CV2CoberturasyCobBtn2 = new javax.swing.JButton();
         jScrollPane25 = new javax.swing.JScrollPane();
@@ -349,7 +346,6 @@ public class VIDA extends javax.swing.JInternalFrame {
         jLabel81 = new javax.swing.JLabel();
         CGM2VolverBtn1 = new javax.swing.JButton();
         CGM2AtrasBtn1 = new javax.swing.JButton();
-        CGMSalirBtn1 = new javax.swing.JButton();
         jLabel82 = new javax.swing.JLabel();
         jLabel85 = new javax.swing.JLabel();
         jScrollPane10 = new javax.swing.JScrollPane();
@@ -1025,16 +1021,6 @@ public class VIDA extends javax.swing.JInternalFrame {
                 .addGap(66, 66, 66))
         );
 
-        IGMSalirBtn1.setBackground(new java.awt.Color(51, 0, 0));
-        IGMSalirBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        IGMSalirBtn1.setForeground(new java.awt.Color(255, 255, 255));
-        IGMSalirBtn1.setText("SALIR");
-        IGMSalirBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IGMSalirBtn1ActionPerformed(evt);
-            }
-        });
-
         IGMvolverBtn1.setBackground(new java.awt.Color(0, 0, 0));
         IGMvolverBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         IGMvolverBtn1.setForeground(new java.awt.Color(255, 255, 255));
@@ -1067,8 +1053,7 @@ public class VIDA extends javax.swing.JInternalFrame {
                         .addGap(54, 54, 54)
                         .addGroup(I_VIDA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(IGMvolverBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(IGMAtrasBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(IGMSalirBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(IGMAtrasBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(I_VIDA1Layout.createSequentialGroup()
                         .addGap(200, 200, 200)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1084,9 +1069,7 @@ public class VIDA extends javax.swing.JInternalFrame {
                     .addGroup(I_VIDA1Layout.createSequentialGroup()
                         .addComponent(IGMvolverBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(IGMAtrasBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(IGMSalirBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(IGMAtrasBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(167, Short.MAX_VALUE))
         );
@@ -1312,16 +1295,6 @@ public class VIDA extends javax.swing.JInternalFrame {
             }
         });
 
-        CGMSalirbtn1.setBackground(new java.awt.Color(51, 0, 0));
-        CGMSalirbtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CGMSalirbtn1.setForeground(new java.awt.Color(255, 255, 255));
-        CGMSalirbtn1.setText("SALIR");
-        CGMSalirbtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CGMSalirbtn1ActionPerformed(evt);
-            }
-        });
-
         TBL_VD.setBackground(new java.awt.Color(0, 0, 51));
         TBL_VD.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         TBL_VD.setForeground(new java.awt.Color(255, 255, 255));
@@ -1355,9 +1328,7 @@ public class VIDA extends javax.swing.JInternalFrame {
             jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel45Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CGMSalirbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CGMVolverBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(CGMVolverBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(85, 85, 85))
             .addGroup(jPanel45Layout.createSequentialGroup()
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1385,19 +1356,14 @@ public class VIDA extends javax.swing.JInternalFrame {
                 .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CGMVolverBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel45Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(CGMSalirbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel45Layout.createSequentialGroup()
-                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BUSCAR_VD, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(COMBO_VD, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CGMLimpiarBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CGMBuscarbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(25, 25, 25)
+                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BUSCAR_VD, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(COMBO_VD, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CGMLimpiarBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CGMBuscarbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
                 .addComponent(jScrollPane24, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
                 .addGap(198, 198, 198))
         );
@@ -1432,16 +1398,6 @@ public class VIDA extends javax.swing.JInternalFrame {
         CGM2AtrasBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CGM2AtrasBtn2ActionPerformed(evt);
-            }
-        });
-
-        CGMSalirBtn2.setBackground(new java.awt.Color(51, 0, 0));
-        CGMSalirBtn2.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CGMSalirBtn2.setForeground(new java.awt.Color(255, 255, 255));
-        CGMSalirBtn2.setText("SALIR");
-        CGMSalirBtn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CGMSalirBtn2ActionPerformed(evt);
             }
         });
 
@@ -1532,11 +1488,9 @@ public class VIDA extends javax.swing.JInternalFrame {
                     .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CGMSalirBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(CGM2AtrasBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CGM2VolverBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)))
+                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CGM2AtrasBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CGM2VolverBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE))
                 .addGap(174, 174, 174))
         );
         jPanel46Layout.setVerticalGroup(
@@ -1547,9 +1501,7 @@ public class VIDA extends javax.swing.JInternalFrame {
                         .addGap(110, 110, 110)
                         .addComponent(CGM2VolverBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(CGM2AtrasBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(93, 93, 93)
-                        .addComponent(CGMSalirBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(CGM2AtrasBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel46Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1599,16 +1551,6 @@ public class VIDA extends javax.swing.JInternalFrame {
         CGM2AtrasBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CGM2AtrasBtn1ActionPerformed(evt);
-            }
-        });
-
-        CGMSalirBtn1.setBackground(new java.awt.Color(51, 0, 0));
-        CGMSalirBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CGMSalirBtn1.setForeground(new java.awt.Color(255, 255, 255));
-        CGMSalirBtn1.setText("SALIR");
-        CGMSalirBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CGMSalirBtn1ActionPerformed(evt);
             }
         });
 
@@ -1698,11 +1640,9 @@ public class VIDA extends javax.swing.JInternalFrame {
                             .addComponent(jLabel82, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane11, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                        .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CGMSalirBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(CGM2AtrasBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(CGM2VolverBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)))
+                        .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(CGM2AtrasBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CGM2VolverBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE))
                         .addGap(174, 174, 174))
                     .addGroup(C_GM3Layout.createSequentialGroup()
                         .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1729,11 +1669,7 @@ public class VIDA extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(C_GM3Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(CGMSalirBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1751,8 +1687,8 @@ public class VIDA extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 12, Short.MAX_VALUE)
                 .addComponent(VIDA, javax.swing.GroupLayout.PREFERRED_SIZE, 1525, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
@@ -1837,10 +1773,6 @@ if(IDAS_VD.getText().equals("")|| NOPOL_VD.getText().equals("") || FI_VD.getText
         } }
     }//GEN-LAST:event_limpiar11ActionPerformed
 
-    private void IGMSalirBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IGMSalirBtn1ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_IGMSalirBtn1ActionPerformed
-
     private void IGMvolverBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IGMvolverBtn1ActionPerformed
        VIDA.setSelectedIndex(0);
     }//GEN-LAST:event_IGMvolverBtn1ActionPerformed
@@ -1865,10 +1797,6 @@ if(IDAS_VD.getText().equals("")|| NOPOL_VD.getText().equals("") || FI_VD.getText
        src.Busquedavd(Campo5(COMBO_VD.getSelectedItem().toString()), BUSCAR_VD.getText());
     }//GEN-LAST:event_CGMBuscarbtn1ActionPerformed
 
-    private void CGMSalirbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGMSalirbtn1ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CGMSalirbtn1ActionPerformed
-
     private void TBL_VDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TBL_VDMouseClicked
         int fila  = TBL_VD.getSelectedRow();String Id;
         if (fila>=0){ Id = valueOf(TBL_VD.getValueAt(fila, 1)); consulta.cvd(Id);VIDA.setSelectedIndex(6);
@@ -1884,10 +1812,6 @@ if(IDAS_VD.getText().equals("")|| NOPOL_VD.getText().equals("") || FI_VD.getText
     private void CGM2AtrasBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2AtrasBtn2ActionPerformed
         VIDA.setSelectedIndex(5);
     }//GEN-LAST:event_CGM2AtrasBtn2ActionPerformed
-
-    private void CGMSalirBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGMSalirBtn2ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CGMSalirBtn2ActionPerformed
 
     private void CV2CoberturasyCobBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV2CoberturasyCobBtn2ActionPerformed
         String id = TBL_VD2.getValueAt(2,1).toString();
@@ -2007,19 +1931,15 @@ if(IDAS_VD.getText().equals("")|| NOPOL_VD.getText().equals("") || FI_VD.getText
         VIDA.setSelectedIndex(6);
     }//GEN-LAST:event_CGM2AtrasBtn1ActionPerformed
 
-    private void CGMSalirBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGMSalirBtn1ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CGMSalirBtn1ActionPerformed
-
     private void CGM2AtrasBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2AtrasBtn3ActionPerformed
         VIDA.setSelectedIndex(4);
     }//GEN-LAST:event_CGM2AtrasBtn3ActionPerformed
 
     private void CGM2AtrasBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2AtrasBtn4ActionPerformed
         String id = TBL_BENEFICIARIOS.getValueAt(TBL_BENEFICIARIOS.getSelectedRow(),0).toString();
-        String sql = "DELETE  FROM tbl_beneficiarios WHERE IdBeneficiario_bfo ="+id+"";
+        String sql = "DELETE  FROM tbl_beneficiarios WHERE IdBeneficiario_bfs ="+id+"";
         String NoPol="";
-        if(TBL_VD.getSelectedRow()<0){JOptionPane.showMessageDialog(null,"POR FAVOR SELECCIONE UN BENEFICIARIO");}else{
+        if(TBL_BENEFICIARIOS.getSelectedRow()<0){JOptionPane.showMessageDialog(null,"POR FAVOR SELECCIONE UN BENEFICIARIO");}else{
             try {
                 PreparedStatement pps = cn.prepareStatement(sql);
                 pps.executeUpdate();
@@ -2046,9 +1966,6 @@ if(IDAS_VD.getText().equals("")|| NOPOL_VD.getText().equals("") || FI_VD.getText
     private javax.swing.JButton CGMElimBtn1;
     private javax.swing.JButton CGMLimpiarBtn1;
     private javax.swing.JButton CGMModBtn1;
-    private javax.swing.JButton CGMSalirBtn1;
-    private javax.swing.JButton CGMSalirBtn2;
-    private javax.swing.JButton CGMSalirbtn1;
     private javax.swing.JButton CGMVolverBtn1;
     public static javax.swing.JTextField COBERTURA_VD;
     public static javax.swing.JComboBox<String> COMBO_VD;
@@ -2077,7 +1994,6 @@ if(IDAS_VD.getText().equals("")|| NOPOL_VD.getText().equals("") || FI_VD.getText
     private javax.swing.JButton IGM2IngresarPagTxt1;
     private javax.swing.JButton IGMAtrasBtn1;
     private javax.swing.JButton IGMConyugueBtn1;
-    private javax.swing.JButton IGMSalirBtn1;
     private javax.swing.JButton IGMvolverBtn1;
     private javax.swing.JPanel I_GM2;
     private javax.swing.JPanel I_VIDA1;

@@ -245,17 +245,26 @@ public  static int tipo;
         DESK.add(vd);
         vd.show();
         vd.tipo = tipo;
+         vd.setVisible(false);
+        VIDA vd1 = new VIDA ();
+        DESK.add(vd1);
+        vd1.show();
+        vd1.tipo = tipo;
         
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         CLIENTES clt = new CLIENTES ();
-        
+        CLIENTES.tipo = PRINCIPAL.tipo;
         DESK.add(clt);
         clt.show();
-        clt.tipo = this.tipo;
-     
-       
+        clt.setVisible(false);
+        CLIENTES clt1 = new CLIENTES ();
+        CLIENTES.tipo = PRINCIPAL.tipo;
+        DESK.add(clt1);
+        clt1.show();
+        
+        
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -263,6 +272,11 @@ public  static int tipo;
         DESK.add(vhl);
          vhl.tipo=tipo;
         vhl.show();
+         vhl.setVisible(false);
+         VEHICULOS vhl1 = new VEHICULOS();
+        DESK.add(vhl1);
+         vhl1.tipo=tipo;
+        vhl1.show();
        
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
@@ -271,6 +285,11 @@ public  static int tipo;
    DESK.add(med);
    med.show();
    med.tipo= tipo;
+   med.setVisible(false);
+   GASTOS_MEDICOS med1 = new GASTOS_MEDICOS();
+   DESK.add(med1);
+   med1.show();
+   med1.tipo= tipo;
      
         
     }//GEN-LAST:event_jMenuItem3ActionPerformed
@@ -280,6 +299,11 @@ public  static int tipo;
    DESK.add(ASG);
    ASG.show();
    ASG.tipo=tipo;
+   ASG.setVisible(false);
+   ASEGURADORA ASG1 = new ASEGURADORA();
+   DESK.add(ASG1);
+   ASG1.show();
+   ASG1.tipo=tipo;
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
@@ -287,6 +311,11 @@ public  static int tipo;
    DESK.add(CTO);
    CTO.show();
    CTO.tipo=tipo;
+    CTO.setVisible(false);
+    CONTACTO CTO1 = new CONTACTO();
+   DESK.add(CTO1);
+   CTO1.show();
+   CTO1.tipo=tipo;
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
@@ -294,6 +323,11 @@ public  static int tipo;
    DESK.add(EE);
    EE.show();
    EE.tipo = tipo;
+    EE.setVisible(false);
+     EQUIPO_E EE1 = new EQUIPO_E();
+   DESK.add(EE1);
+   EE1.show();
+   EE1.tipo = tipo;
    
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
@@ -302,6 +336,11 @@ public  static int tipo;
    DESK.add(cbr);
    cbr.show();
    cbr.tipo =tipo;
+   cbr.setVisible(false);
+    COBROS cbr1 = new COBROS();
+   DESK.add(cbr1);
+   cbr1.show();
+   cbr1.tipo =tipo;
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed

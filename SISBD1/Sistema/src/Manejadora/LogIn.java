@@ -225,9 +225,11 @@ public class LogIn extends javax.swing.JFrame {
         {
             st = cn.createStatement();
             rs = st.executeQuery("SELECT Tipo FROM usuarios WHERE (User = '"+user+"' and  Pass ='"+pass+"')");
-            if(rs==null){
-                JOptionPane.showMessageDialog(null, " USUARIO O CONTRASEÑA INCORRECTA..");}
-            if(rs!=null){
+            if(rs == null){
+               
+                JOptionPane.showMessageDialog(null, "USUARIO O CONTRASEÑA INCORRECTA..");
+            }
+           else if(rs != null){
             if(rs.next()){
                 switch(rs.getString("Tipo"))
         {
@@ -253,11 +255,11 @@ public class LogIn extends javax.swing.JFrame {
                  this.setVisible(false);
             break;
             default :
-                 JOptionPane.showMessageDialog(null, " USUARIO O CONTRASEÑA INCORRECTA..");
+                
         }
             
             }
-            }
+            } else { JOptionPane.showMessageDialog(null, " USUARIO O CONTRASEÑA INCORRECTA..");}
         }catch (SQLException ex) {
             Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
         
@@ -266,7 +268,8 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_AceptarIngresoBtnActionPerformed
     }
     private void LimpiarIngresoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarIngresoBtnActionPerformed
-        // TODO add your handling code here:
+        USER.setText("");
+        PASS.setText("");
     }//GEN-LAST:event_LimpiarIngresoBtnActionPerformed
 
     private void SalirIngresoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirIngresoBtnActionPerformed

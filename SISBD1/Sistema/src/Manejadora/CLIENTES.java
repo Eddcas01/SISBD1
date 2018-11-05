@@ -1032,7 +1032,13 @@ public class CLIENTES extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CcltModificarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CcltModificarBtnActionPerformed
-       ICAceptarBtn5.setEnabled(true);
+
+        
+        if(tipo == 2){
+         CcltModificarBtn.setEnabled(false);
+         CcltEliminarBtn.setEnabled(false);
+        }
+        ICAceptarBtn5.setEnabled(true);
         ICApellido1Txt2.setText(valueOf(TblCC2.getValueAt(1, 1)));
         ICApellido2Txt2.setText(valueOf(TblCC2.getValueAt(2, 1)));
         ICApellidoCasTxt2.setText(valueOf(TblCC2.getValueAt(3, 1)));
@@ -1052,6 +1058,7 @@ public class CLIENTES extends javax.swing.JInternalFrame {
         ICTelCelTxt2.setText(valueOf(TblCC2.getValueAt(17, 1)));
          ICAceptarBtn5.setEnabled(true);
          ICAceptarBtn4.setEnabled(false);
+         
         CLIENTES.setSelectedIndex(1);
     }//GEN-LAST:event_CcltModificarBtnActionPerformed
 
