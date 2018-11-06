@@ -34,6 +34,7 @@ public class CLIENTES extends javax.swing.JInternalFrame {
     public CLIENTES() {
         
         initComponents();
+        
        CLIENTES.setEnabled(false);
         
         

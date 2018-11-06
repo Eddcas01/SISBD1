@@ -262,7 +262,7 @@ public class COBROS extends javax.swing.JInternalFrame {
        modelo1.addColumn("POLIZA");  
        modelo1.addColumn("INFORMACION");
  
-       String sql ="SELECT * FROM tbl_vehiculos WHERE idPolizaVhl='"+Id+"'";
+       String sql ="SELECT * FROM tbl_vehiculos WHERE NoPoliza_vhl='"+Id+"'";
        String datos[] = new String[2];
        Statement st;
         try {
@@ -685,9 +685,9 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         IVNoPIngresadoTxt = new javax.swing.JTextField();
         C_GM1 = new javax.swing.JPanel();
         jLabel67 = new javax.swing.JLabel();
-        CGMSalirbtn = new javax.swing.JButton();
         jScrollPane12 = new javax.swing.JScrollPane();
         TBLC_COBROS = new javax.swing.JTable();
+        CGM2VolverBtn4 = new javax.swing.JButton();
         C_GM2 = new javax.swing.JPanel();
         jLabel68 = new javax.swing.JLabel();
         CGM2VolverBtn = new javax.swing.JButton();
@@ -714,7 +714,6 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         C_VEHICULOS2 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         CV2CoberturasyCobBtn = new javax.swing.JButton();
-        CV2SalirBtn = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         TblCV2 = new javax.swing.JTable();
         CGM2AtrasBtn6 = new javax.swing.JButton();
@@ -733,7 +732,6 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         DESC_EE2 = new javax.swing.JTextArea();
         C_GM3 = new javax.swing.JPanel();
         CGM2AtrasBtn1 = new javax.swing.JButton();
-        CGMSalirBtn1 = new javax.swing.JButton();
         jLabel82 = new javax.swing.JLabel();
         jScrollPane10 = new javax.swing.JScrollPane();
         TBL_CBR = new javax.swing.JTable();
@@ -762,6 +760,8 @@ DefaultTableModel modelo1 = new DefaultTableModel();
             public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
             }
         });
+
+        COBRO.setBackground(new java.awt.Color(51, 51, 51));
 
         MENU1.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -900,23 +900,22 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         MENU1Layout.setHorizontalGroup(
             MENU1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MENU1Layout.createSequentialGroup()
-                .addGroup(MENU1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MENU1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(MENU1Layout.createSequentialGroup()
-                        .addGap(310, 310, 310)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(449, Short.MAX_VALUE))
+                .addGap(310, 310, 310)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1047, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MENU1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(204, 204, 204))
         );
         MENU1Layout.setVerticalGroup(
             MENU1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MENU1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(45, 45, 45)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         COBRO.addTab("MENU", MENU1);
@@ -1301,7 +1300,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                     .addGroup(COBROSLayout.createSequentialGroup()
                         .addGap(149, 149, 149)
                         .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addContainerGap(603, Short.MAX_VALUE))
         );
         COBROSLayout.setVerticalGroup(
             COBROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1329,16 +1328,6 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         jLabel67.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel67.setText("SELECCION DE POLIZA");
         jLabel67.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        CGMSalirbtn.setBackground(new java.awt.Color(51, 0, 0));
-        CGMSalirbtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CGMSalirbtn.setForeground(new java.awt.Color(255, 255, 255));
-        CGMSalirbtn.setText("SALIR");
-        CGMSalirbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CGMSalirbtnActionPerformed(evt);
-            }
-        });
 
         TBLC_COBROS.setBackground(new java.awt.Color(0, 0, 51));
         TBLC_COBROS.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
@@ -1376,14 +1365,20 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         });
         jScrollPane12.setViewportView(TBLC_COBROS);
 
+        CGM2VolverBtn4.setBackground(new java.awt.Color(0, 0, 0));
+        CGM2VolverBtn4.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        CGM2VolverBtn4.setForeground(new java.awt.Color(255, 255, 255));
+        CGM2VolverBtn4.setText("VOLVER A MENÚ");
+        CGM2VolverBtn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CGM2VolverBtn4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout C_GM1Layout = new javax.swing.GroupLayout(C_GM1);
         C_GM1.setLayout(C_GM1Layout);
         C_GM1Layout.setHorizontalGroup(
             C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, C_GM1Layout.createSequentialGroup()
-                .addContainerGap(1071, Short.MAX_VALUE)
-                .addComponent(CGMSalirbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34))
             .addGroup(C_GM1Layout.createSequentialGroup()
                 .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(C_GM1Layout.createSequentialGroup()
@@ -1392,16 +1387,20 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                     .addGroup(C_GM1Layout.createSequentialGroup()
                         .addGap(283, 283, 283)
                         .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(620, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, C_GM1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(CGM2VolverBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82))
         );
         C_GM1Layout.setVerticalGroup(
             C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(C_GM1Layout.createSequentialGroup()
                 .addGap(137, 137, 137)
                 .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(CGMSalirbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
+                .addGap(2, 2, 2)
+                .addComponent(CGM2VolverBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74)
                 .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
                 .addContainerGap(140, Short.MAX_VALUE))
         );
@@ -1642,7 +1641,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel46Layout.createSequentialGroup()
                         .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(473, 669, Short.MAX_VALUE))
+                        .addGap(473, 1062, Short.MAX_VALUE))
                     .addGroup(jPanel46Layout.createSequentialGroup()
                         .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1656,7 +1655,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                             .addComponent(jLabel98, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane26))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CV2CoberturasyCobBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                        .addComponent(CV2CoberturasyCobBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)
                         .addGap(427, 427, 427))))
         );
         jPanel46Layout.setVerticalGroup(
@@ -1700,16 +1699,6 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         CV2CoberturasyCobBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CV2CoberturasyCobBtnActionPerformed(evt);
-            }
-        });
-
-        CV2SalirBtn.setBackground(new java.awt.Color(51, 0, 0));
-        CV2SalirBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CV2SalirBtn.setForeground(new java.awt.Color(255, 255, 255));
-        CV2SalirBtn.setText("SALIR");
-        CV2SalirBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CV2SalirBtnActionPerformed(evt);
             }
         });
 
@@ -1767,11 +1756,9 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(CV2CoberturasyCobBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(125, 125, 125)
-                .addGroup(C_VEHICULOS2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(C_VEHICULOS2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(CGM2AtrasBtn6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CGM2VolverBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(CV2SalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(C_VEHICULOS2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CGM2AtrasBtn6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CGM2VolverBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(423, 423, 423))
         );
         C_VEHICULOS2Layout.setVerticalGroup(
@@ -1787,9 +1774,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                             .addGroup(C_VEHICULOS2Layout.createSequentialGroup()
                                 .addComponent(CGM2VolverBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(CGM2AtrasBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(CV2SalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(CGM2AtrasBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(C_VEHICULOS2Layout.createSequentialGroup()
                         .addGap(265, 265, 265)
                         .addComponent(CV2CoberturasyCobBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1955,16 +1940,6 @@ DefaultTableModel modelo1 = new DefaultTableModel();
             }
         });
 
-        CGMSalirBtn1.setBackground(new java.awt.Color(51, 0, 0));
-        CGMSalirBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CGMSalirBtn1.setForeground(new java.awt.Color(255, 255, 255));
-        CGMSalirBtn1.setText("SALIR");
-        CGMSalirBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CGMSalirBtn1ActionPerformed(evt);
-            }
-        });
-
         jLabel82.setBackground(new java.awt.Color(204, 102, 0));
         jLabel82.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
         jLabel82.setForeground(new java.awt.Color(255, 255, 255));
@@ -2026,10 +2001,8 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(CGM2AtrasBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CGMSalirBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CGM2AtrasBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(206, Short.MAX_VALUE))
+                .addComponent(CGM2AtrasBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(599, Short.MAX_VALUE))
         );
         C_GM3Layout.setVerticalGroup(
             C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2039,11 +2012,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                     .addComponent(CGM2AtrasBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
-                .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(C_GM3Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(CGMSalirBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(CGM2AtrasBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2058,7 +2027,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 24, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(COBRO, javax.swing.GroupLayout.PREFERRED_SIZE, 1332, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
@@ -2069,27 +2038,19 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CGMSalirBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGMSalirBtn1ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CGMSalirBtn1ActionPerformed
-
     private void CGM2AtrasBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2AtrasBtn1ActionPerformed
        COBRO.setSelectedIndex(3);
     }//GEN-LAST:event_CGM2AtrasBtn1ActionPerformed
-
-    private void CV2SalirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV2SalirBtnActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CV2SalirBtnActionPerformed
 
     private void CV2CoberturasyCobBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV2CoberturasyCobBtnActionPerformed
         switch(Ingresos)
         {
             case 1:
            mostrar_tabla2();
-            COBRO.setSelectedIndex(3); break;
+            COBRO.setSelectedIndex(2); break;
             default:
        String NoPol;
-        NoPol = valueOf(TBLC_COBROS.getValueAt(2, 1));
+        NoPol = valueOf(TblCV2.getValueAt(2, 1));
        cv4(NoPol);
         COBRO.setSelectedIndex(8);
         }
@@ -2103,7 +2064,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         {
             case 1:
            mostrar_tabla2();
-            COBRO.setSelectedIndex(3); break;
+            COBRO.setSelectedIndex(2); break;
             default:
        String id = TBL_VD2.getValueAt(2,1).toString();
         cvd2(id);
@@ -2207,10 +2168,6 @@ switch(menu)
         }
         
     }//GEN-LAST:event_TBLC_COBROSMouseClicked
-
-    private void CGMSalirbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGMSalirbtnActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CGMSalirbtnActionPerformed
 
     private void IV2AtrasBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IV2AtrasBtn1ActionPerformed
         COBRO.setSelectedIndex(3);
@@ -2381,8 +2338,8 @@ switch(menu)
         switch(Ingresos)
         {
             case 1:
-           mostrar_tabla2();
-            COBRO.setSelectedIndex(3); break;
+          
+            COBRO.setSelectedIndex(2); break;
             default:
         int fila  = TBLC_COBROS.getSelectedRow();
         String NoPol;
@@ -2390,7 +2347,7 @@ switch(menu)
             NoPol = valueOf(TBLC_COBROS.getValueAt(fila, 1));
 
            cee2(NoPol);
-            COBRO.setSelectedIndex(6);
+            COBRO.setSelectedIndex(8);
         }else{
             JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO CLIENTE");
         }
@@ -2430,92 +2387,90 @@ switch(menu)
     }//GEN-LAST:event_CGM2AtrasBtn4ActionPerformed
 
     private void CGM2AtrasBtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2AtrasBtn5ActionPerformed
-       switch(menu)
+        
+        switch(menu)
         {
             case 1:
                 try {
-            String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),3));
+                    
+              if(TBL_CBR.getSelectedRow()<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}else{
+                   String NoPol;
+                   int filavhl  = TBL_CBR.getSelectedRow();
+              String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),3));
             String sql = "DELETE  FROM tbl_cobros_vhl  WHERE NoRequerimiento_cbrvhl ="+id+"";
-
             PreparedStatement pps = cn.prepareStatement(sql);
             pps.executeUpdate();
             JOptionPane.showMessageDialog(null,"ELIMINADO");
-        } catch (SQLException ex) {
-            Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
-        }
-          
-                int filavhl  = TBL_CBR.getSelectedRow();
-        String NoPol;
-        if(filavhl<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}
             NoPol = valueOf(TBL_CBR.getValueAt(filavhl, 1));
            cv4(NoPol);
-            COBRO.setSelectedIndex(8);break;
-       
+            COBRO.setSelectedIndex(8);}
             
+        } catch (SQLException ex) {
+            Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
+        }   
+            break;   
          
            case 2:
                
                try {
-            String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),2));
+          int filagm  = TBL_CBR.getSelectedRow();
+        String NoPolgm;
+                   if(filagm<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}else{
+             String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),2));
             String sql = "DELETE FROM tbl_cobros_gm WHERE NoRequerimiento_cbrgm="+id+"";
-
+            COBRO.setSelectedIndex(8);
             PreparedStatement pps = cn.prepareStatement(sql);
-            pps.executeUpdate();
-
-            
-           
-            JOptionPane.showMessageDialog(null,"ELIMINADO");
+            pps.executeUpdate();  
+             NoPolgm = valueOf(TBL_CBR.getValueAt(filagm, 1));
+           cgm2(NoPolgm);
+            JOptionPane.showMessageDialog(null,"ELIMINADO");   }
         } catch (SQLException ex) {
             Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
         }
-              int filagm  = TBL_CBR.getSelectedRow();
-        String NoPolgm;
-         if(filagm<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}
-            NoPolgm = valueOf(TBL_CBR.getValueAt(filagm, 1));
-           cgm2(NoPolgm);
-            COBRO.setSelectedIndex(8);
                break;
+               
+               
+               
             case 3:
                 try {
+              int filaee  = TBL_CBR.getSelectedRow();
+              String NoPolee;
+            if(filaee<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}else{
+                
+            NoPolee = valueOf(TBL_CBR.getValueAt(filaee, 1));
             String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),2));
             String sql = "DELETE FROM tbl_cobros_ee WHERE NoRequerimiento_cbree="+id+"";
-
             PreparedStatement pps = cn.prepareStatement(sql);
             pps.executeUpdate();
+            cee2(NoPolee);
+            COBRO.setSelectedIndex(8);
 
-            
-           
-            JOptionPane.showMessageDialog(null,"ELIMINADO");
+            JOptionPane.showMessageDialog(null,"ELIMINADO");}
         } catch (SQLException ex) {
             Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
         }
-           int filaee  = TBL_CBR.getSelectedRow();
-        String NoPolee;
-        if(filaee<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}
-            NoPolee = valueOf(TBL_CBR.getValueAt(filaee, 1));
-           cee2(NoPolee);
-            COBRO.setSelectedIndex(8);
+         
          break;
             case 4:
                 try {
+           int filavd  = TBL_CBR.getSelectedRow();
+             String NoPolvd;
+         if(filavd<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}else{
             String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),2));
             String sql = "DELETE FROM tbl_cobros_vd WHERE NoRequerimiento_cbrvd="+id+"";
 
             PreparedStatement pps = cn.prepareStatement(sql);
             pps.executeUpdate();
-
-           
-           
-            JOptionPane.showMessageDialog(null,"ELIMINADO");
-        } catch (SQLException ex) {
-            Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
-        }
-           int filavd  = TBL_CBR.getSelectedRow();
-        String NoPolvd;
-         if(filavd<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}
             NoPolvd = valueOf(TBL_CBR.getValueAt(filavd, 1));
            cvd2(NoPolvd);
             COBRO.setSelectedIndex(8);
+           
+           
+            JOptionPane.showMessageDialog(null,"ELIMINADO");}
+        } catch (SQLException ex) {
+            Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         break;
         
         }
@@ -2526,7 +2481,7 @@ switch(menu)
     }//GEN-LAST:event_CGM2AtrasBtn6ActionPerformed
 
     private void CGM2VolverBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2VolverBtn3ActionPerformed
-        // TODO add your handling code here:
+       COBRO.setSelectedIndex(0);
     }//GEN-LAST:event_CGM2VolverBtn3ActionPerformed
 
     private void IV2AtrasBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IV2AtrasBtn2ActionPerformed
@@ -2586,7 +2541,7 @@ switch(menu)
         
             NoPolgm = valueOf(TBL_CBR.getValueAt(filagm, 1));
            cgm2(NoPolgm);
-            COBRO.setSelectedIndex(6);
+            COBRO.setSelectedIndex(8);
                break;
             case 3:
                 try {
@@ -2611,7 +2566,7 @@ switch(menu)
         
             NoPolee = valueOf(TBL_CBR.getValueAt(filaee, 1));
            cee2(NoPolee);
-            COBRO.setSelectedIndex(6);
+            COBRO.setSelectedIndex(8);
          break;
             case 4:
                 try {
@@ -2636,7 +2591,7 @@ switch(menu)
         
             NoPolvd = valueOf(TBL_CBR.getValueAt(filavd, 1));
            cvd2(NoPolvd);
-            COBRO.setSelectedIndex(6);
+            COBRO.setSelectedIndex(8);
         break;
         
         }
@@ -2652,6 +2607,10 @@ switch(menu)
       this.setSize(1366, 857);
     }//GEN-LAST:event_formInternalFrameDeiconified
 
+    private void CGM2VolverBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2VolverBtn4ActionPerformed
+            COBRO.setSelectedIndex(0);
+    }//GEN-LAST:event_CGM2VolverBtn4ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CGM2AtrasBtn;
@@ -2665,17 +2624,15 @@ switch(menu)
     private javax.swing.JButton CGM2VolverBtn1;
     private javax.swing.JButton CGM2VolverBtn2;
     private javax.swing.JButton CGM2VolverBtn3;
+    private javax.swing.JButton CGM2VolverBtn4;
     private javax.swing.JButton CGMSalirBtn;
-    private javax.swing.JButton CGMSalirBtn1;
     private javax.swing.JButton CGMSalirBtn3;
-    private javax.swing.JButton CGMSalirbtn;
     private javax.swing.JTabbedPane COBRO;
     private javax.swing.JPanel COBROS;
     private javax.swing.JButton CV2CoberturasyCobBtn;
     private javax.swing.JButton CV2CoberturasyCobBtn1;
     private javax.swing.JButton CV2CoberturasyCobBtn2;
     private javax.swing.JButton CV2CoberturasyCobBtn3;
-    private javax.swing.JButton CV2SalirBtn;
     private javax.swing.JPanel C_GM1;
     private javax.swing.JPanel C_GM2;
     private javax.swing.JPanel C_GM3;

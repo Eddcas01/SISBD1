@@ -51,13 +51,15 @@ public  static int tipo;
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1210, 900));
+        setMinimumSize(new java.awt.Dimension(1210, 900));
 
         DESK.setBackground(new java.awt.Color(204, 255, 255));
+        DESK.setMinimumSize(getPreferredSize());
         DESK.setOpaque(false);
 
         javax.swing.GroupLayout DESKLayout = new javax.swing.GroupLayout(DESK);
@@ -68,7 +70,7 @@ public  static int tipo;
         );
         DESKLayout.setVerticalGroup(
             DESKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 724, Short.MAX_VALUE)
+            .addGap(0, 789, Short.MAX_VALUE)
         );
 
         MENU.setBackground(new java.awt.Color(204, 204, 204));
@@ -79,7 +81,7 @@ public  static int tipo;
 
         jMenu1.setBackground(java.awt.Color.darkGray);
         jMenu1.setForeground(new java.awt.Color(0, 0, 0));
-        jMenu1.setText("AYASEG");
+        jMenu1.setText("MENU");
         jMenu1.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
         jMenu1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jMenu1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -185,16 +187,6 @@ public  static int tipo;
         });
         jMenu1.add(jMenuItem10);
 
-        jMenuItem11.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
-        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/estrella (2).png"))); // NOI18N
-        jMenuItem11.setText("CUMPLEAÑOS");
-        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem11ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem11);
-
         jMenuItem12.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/equipo.png"))); // NOI18N
         jMenuItem12.setText("USUARIOS");
@@ -234,7 +226,7 @@ public  static int tipo;
                 .addComponent(DESK, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(fondo, javax.swing.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE))
+                .addComponent(fondo, javax.swing.GroupLayout.DEFAULT_SIZE, 813, Short.MAX_VALUE))
         );
 
         pack();
@@ -356,12 +348,6 @@ public  static int tipo;
         
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
-    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        cumple ce = new cumple();
-        DESK.add(ce);
-        ce.show();
-    }//GEN-LAST:event_jMenuItem11ActionPerformed
-
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
        USUARIOS ce = new USUARIOS();
         DESK.add(ce);
@@ -416,7 +402,6 @@ public  static int tipo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
