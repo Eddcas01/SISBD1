@@ -143,6 +143,7 @@ public class Ingresos {
             }
       }
       /////////////////////////////////////////////////////////////////
+
       public void ingresoCobrosGM(int i,String id, String NP){
       try {
                 PreparedStatement pps = cne.prepareStatement("INSERT INTO `tbl_cobros_gm`(`IdCliente_cbrgm`,"
@@ -324,5 +325,78 @@ public class Ingresos {
                 Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
             }
     }
+            ////////////////////////////////////////////////////////////////
+      public void ingresoReclamosV(String NP, String clt, String tipo){
+      try {
+                PreparedStatement pps = cne.prepareStatement("INSERT INTO `tbl_Reclamos_vhl`("
+                +" `IdPolizaRcl_vhl`,`FechaRcl_vhl`, `ClienteRcl_vhl`, "
+                +"`TipoPolizaRcl_vhl`, `DescripcionRcl_vhl`) VALUES(?,?,?,?,?)");
+                pps.setString(1, NP);
+                pps.setString(2, Manejadora.RECLAMOS.FECHA_COBRO.getText());
+                pps.setString(3, clt);
+                pps.setString(4, tipo);
+                pps.setString(5,  Manejadora.RECLAMOS.TEL_CTO1.getText());
+                pps.executeUpdate();
+                JOptionPane.showMessageDialog(null,"Guardado");
+
+            } catch (SQLException ex) {
+                Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
+            }
+      }
+      /////////////////////////////////////////////////////////////////
+            public void ingresoReclamosGM(String NP, String clt, String tipo){
+      try {
+                PreparedStatement pps = cne.prepareStatement("INSERT INTO `tbl_Reclamos_gm`("
+                +" `IdPolizaRcl_gm`,`FechaRcl_gm`, `ClienteRcl_gm`, "
+                +"`TipoPolizaRcl_gm`, `DescripcionRcl_gm`) VALUES(?,?,?,?,?)");
+                pps.setString(1, NP);
+                pps.setString(2, Manejadora.RECLAMOS.FECHA_COBRO.getText());
+                pps.setString(3, clt);
+                pps.setString(4, tipo);
+                pps.setString(5,  Manejadora.RECLAMOS.TEL_CTO1.getText());
+                pps.executeUpdate();
+                JOptionPane.showMessageDialog(null,"Guardado");
+
+            } catch (SQLException ex) {
+                Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
+            }
+      }
+      /////////////////////////////////////////////////////////////////
+                  public void ingresoReclamosEE(String NP, String clt, String tipo){
+      try {
+                PreparedStatement pps = cne.prepareStatement("INSERT INTO `tbl_Reclamos_ee`("
+                +" `IdPolizaRcl_ee`,`FechaRcl_ee`, `ClienteRcl_ee`, "
+                +"`TipoPolizaRcl_ee`, `DescripcionRcl_ee`) VALUES(?,?,?,?,?)");
+                pps.setString(1, NP);
+                pps.setString(2, Manejadora.RECLAMOS.FECHA_COBRO.getText());
+                pps.setString(3, clt);
+                pps.setString(4, tipo);
+                pps.setString(5,  Manejadora.RECLAMOS.TEL_CTO1.getText());
+                pps.executeUpdate();
+                JOptionPane.showMessageDialog(null,"Guardado");
+
+            } catch (SQLException ex) {
+                Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
+            }
+      }
+      /////////////////////////////////////////////////////////////////
+      public void ingresoReclamosVD(String NP, String clt, String tipo){
+      try {
+                PreparedStatement pps = cne.prepareStatement("INSERT INTO `tbl_Reclamos_vd`("
+                +" `IdPolizaRcl_vd`,`FechaRcl_vd`, `ClienteRcl_vd`, "
+                +"`TipoPolizaRcl_vd`, `DescripcionRcl_vd`) VALUES(?,?,?,?,?)");
+                pps.setString(1, NP);
+                pps.setString(2, Manejadora.RECLAMOS.FECHA_COBRO.getText());
+                pps.setString(3, clt);
+                pps.setString(4, tipo);
+                pps.setString(5,  Manejadora.RECLAMOS.TEL_CTO1.getText());
+                pps.executeUpdate();
+                JOptionPane.showMessageDialog(null,"Guardado");
+
+            } catch (SQLException ex) {
+                Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
+            }
+      }
+      /////////////////////////////////////////////////////////////////
        
 }

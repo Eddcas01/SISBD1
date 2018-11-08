@@ -48,6 +48,7 @@ public  static int tipo;
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
@@ -156,6 +157,16 @@ public  static int tipo;
             }
         });
         jMenu1.add(jMenuItem6);
+
+        jMenuItem13.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
+        jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/archivo (3).png"))); // NOI18N
+        jMenuItem13.setText("RECLAMOS");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem13);
 
         jMenuItem7.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/ambulancia (2).png"))); // NOI18N
@@ -354,6 +365,18 @@ public  static int tipo;
         ce.show();
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+   RECLAMOS rcl = new RECLAMOS();
+   DESK.add(rcl);
+   rcl.show();
+   rcl.tipo =tipo;
+   rcl.setVisible(false);
+ RECLAMOS rcl1 = new RECLAMOS();
+   DESK.add(rcl1);
+   rcl1.show();
+   rcl1.tipo =tipo;
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -403,6 +426,7 @@ public  static int tipo;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

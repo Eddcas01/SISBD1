@@ -24,7 +24,7 @@ import Base_de_Datos.Ingresos;
  */
 public class RECLAMOS extends javax.swing.JInternalFrame {
 
-    /**
+    /*;
      * Creates new form RECLAMOS
      */
     
@@ -32,6 +32,8 @@ public class RECLAMOS extends javax.swing.JInternalFrame {
     int i =0;
     int Ingresos=0;
     int Cobros = 0;
+     conexionBD cone = new conexionBD();
+    Connection cne = cone.conexion();
      Consultas consulta = new Consultas();
     Busquedas src = new Busquedas();
     public static int tipo=0;
@@ -465,18 +467,14 @@ public class RECLAMOS extends javax.swing.JInternalFrame {
            DefaultTableModel modelo1 = new DefaultTableModel();
      
      
-       modelo1.addColumn("Id Cliente");  
+       modelo1.addColumn("Id Reclamo");  
        modelo1.addColumn("Id Poliza");
-       modelo1.addColumn("No. Poliza");
-       modelo1.addColumn("No. Requerimiento");  
        modelo1.addColumn("Fecha de pago");
-       modelo1.addColumn("Prima");  
-       modelo1.addColumn("No. Pago");
-       modelo1.addColumn("Estado");
-    
-
-       String sql ="SELECT * FROM tbl_cobros_vhl WHERE IdPolizaVhl_cbrvhl="+nopol+"";
-       String datos[] = new String[8];
+       modelo1.addColumn("Id Cliente");
+       modelo1.addColumn("Tipo"); 
+       modelo1.addColumn("Descripcion"); 
+       String sql ="SELECT * FROM tbl_reclamos_vhl WHERE IdPolizaRcl_vhl = "+nopol+"";
+       String datos[] = new String[6];
        Statement st;
         try {
             st = cn.createStatement();
@@ -489,8 +487,6 @@ public class RECLAMOS extends javax.swing.JInternalFrame {
              datos[3]= rs.getString(4);
              datos[4]= rs.getString(5);
              datos[5]= rs.getString(6);
-             datos[6]= rs.getString(7);
-             datos[7]= rs.getString(8);
             modelo1.addRow(datos);
              
             
@@ -502,12 +498,7 @@ public class RECLAMOS extends javax.swing.JInternalFrame {
     TBL_CBR.getColumnModel().getColumn(3).setPreferredWidth(118);
     TBL_CBR.getColumnModel().getColumn(4).setPreferredWidth(123);
     TBL_CBR.getColumnModel().getColumn(5).setPreferredWidth(120);
-    TBL_CBR.getColumnModel().getColumn(6).setPreferredWidth(100);
-    TBL_CBR.getColumnModel().getColumn(7).setPreferredWidth(120);
 
-          
-           
-      
         } catch (SQLException ex) {
             Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -520,16 +511,14 @@ public class RECLAMOS extends javax.swing.JInternalFrame {
            DefaultTableModel modelo1 = new DefaultTableModel();
      
      
-       modelo1.addColumn("Id Cliente");  
-       modelo1.addColumn("No. Poliza");
-       modelo1.addColumn("No. Requerimiento");  
+       modelo1.addColumn("Id Reclamo");  
+       modelo1.addColumn("Id Poliza");
        modelo1.addColumn("Fecha de pago");
-       modelo1.addColumn("Prima");  
-       modelo1.addColumn("No. Pago");
-       modelo1.addColumn("Estado");
-
-       String sql ="SELECT * FROM tbl_cobros_gm WHERE NoPoliza_cbrgm="+nopol+"";
-       String datos[] = new String[7];
+       modelo1.addColumn("Id Cliente");
+       modelo1.addColumn("Tipo"); 
+       modelo1.addColumn("Descripcion"); 
+       String sql ="SELECT * FROM tbl_reclamos_gm WHERE IdPolizaRcl_gm="+nopol+"";
+       String datos[] = new String[6];
        Statement st;
         try {
             st = cn.createStatement();
@@ -542,12 +531,17 @@ public class RECLAMOS extends javax.swing.JInternalFrame {
              datos[3]= rs.getString(4);
              datos[4]= rs.getString(5);
              datos[5]= rs.getString(6);
-             datos[6]= rs.getString(7);
             modelo1.addRow(datos);
              
             
         }
            TBL_CBR.setModel(modelo1); 
+    TBL_CBR.getColumnModel().getColumn(0).setPreferredWidth(75);
+    TBL_CBR.getColumnModel().getColumn(1).setPreferredWidth(80);
+    TBL_CBR.getColumnModel().getColumn(2).setPreferredWidth(105);
+    TBL_CBR.getColumnModel().getColumn(3).setPreferredWidth(118);
+    TBL_CBR.getColumnModel().getColumn(4).setPreferredWidth(123);
+    TBL_CBR.getColumnModel().getColumn(5).setPreferredWidth(120);
           
            
       
@@ -562,16 +556,14 @@ public class RECLAMOS extends javax.swing.JInternalFrame {
 DefaultTableModel modelo1 = new DefaultTableModel();
      
      
-       modelo1.addColumn("Id Cliente");  
-       modelo1.addColumn("No. Poliza");
-       modelo1.addColumn("No. Requerimiento");  
+       modelo1.addColumn("Id Reclamo");  
+       modelo1.addColumn("Id Poliza");
        modelo1.addColumn("Fecha de pago");
-       modelo1.addColumn("Prima");  
-       modelo1.addColumn("No. Pago");
-       modelo1.addColumn("Estado");
-
-       String sql ="SELECT * FROM tbl_cobros_vd WHERE NoPoliza_cbrvd="+nopol+"";
-       String datos[] = new String[7];
+       modelo1.addColumn("Id Cliente");
+       modelo1.addColumn("Tipo"); 
+       modelo1.addColumn("Descripcion"); 
+       String sql ="SELECT * FROM tbl_reclamos_vd WHERE IdPolizaRcl_vd="+nopol+"";
+       String datos[] = new String[6];
        Statement st;
         try {
             st = cn.createStatement();
@@ -584,12 +576,17 @@ DefaultTableModel modelo1 = new DefaultTableModel();
              datos[3]= rs.getString(4);
              datos[4]= rs.getString(5);
              datos[5]= rs.getString(6);
-             datos[6]= rs.getString(7);
             modelo1.addRow(datos);
              
             
         }
-           Manejadora.COBROS.TBL_CBR.setModel(modelo1); 
+           TBL_CBR.setModel(modelo1); 
+    TBL_CBR.getColumnModel().getColumn(0).setPreferredWidth(75);
+    TBL_CBR.getColumnModel().getColumn(1).setPreferredWidth(80);
+    TBL_CBR.getColumnModel().getColumn(2).setPreferredWidth(105);
+    TBL_CBR.getColumnModel().getColumn(3).setPreferredWidth(118);
+    TBL_CBR.getColumnModel().getColumn(4).setPreferredWidth(123);
+    TBL_CBR.getColumnModel().getColumn(5).setPreferredWidth(120);
           
            
       
@@ -604,16 +601,14 @@ DefaultTableModel modelo1 = new DefaultTableModel();
            DefaultTableModel modelo1 = new DefaultTableModel();
      
      
-       modelo1.addColumn("Id Cliente");  
-       modelo1.addColumn("No. Poliza");
-       modelo1.addColumn("No. Requerimiento");  
+       modelo1.addColumn("Id Reclamo");  
+       modelo1.addColumn("Id Poliza");
        modelo1.addColumn("Fecha de pago");
-       modelo1.addColumn("Prima");  
-       modelo1.addColumn("numero de pago");
-       modelo1.addColumn("Estado");
-
-       String sql ="SELECT * FROM tbl_cobros_ee WHERE NoPoliza_cbree="+nopol+"";
-       String datos[] = new String[7];
+       modelo1.addColumn("Id Cliente");
+       modelo1.addColumn("Tipo"); 
+       modelo1.addColumn("Descripcion"); 
+       String sql ="SELECT * FROM tbl_reclamos_ee WHERE IdPolizaRcl_ee="+nopol+"";
+       String datos[] = new String[6];
        Statement st;
         try {
             st = cn.createStatement();
@@ -626,12 +621,17 @@ DefaultTableModel modelo1 = new DefaultTableModel();
              datos[3]= rs.getString(4);
              datos[4]= rs.getString(5);
              datos[5]= rs.getString(6);
-             datos[6]= rs.getString(7);
             modelo1.addRow(datos);
              
             
         }
            TBL_CBR.setModel(modelo1); 
+    TBL_CBR.getColumnModel().getColumn(0).setPreferredWidth(75);
+    TBL_CBR.getColumnModel().getColumn(1).setPreferredWidth(80);
+    TBL_CBR.getColumnModel().getColumn(2).setPreferredWidth(105);
+    TBL_CBR.getColumnModel().getColumn(3).setPreferredWidth(118);
+    TBL_CBR.getColumnModel().getColumn(4).setPreferredWidth(123);
+    TBL_CBR.getColumnModel().getColumn(5).setPreferredWidth(120);
           
            
       
@@ -641,6 +641,78 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         
         
     }
+          public void ingresoReclamosV(String NP, String clt, String tipo){
+      try {
+                PreparedStatement pps = cne.prepareStatement("INSERT INTO `tbl_Reclamos_vhl`("
+                +" `IdPolizaRcl_vhl`,`FechaRcl_vhl`, `ClienteRcl_vhl`, "
+                +"`TipoPolizaRcl_vhl`, `DescripcionRcl_vhl`) VALUES(?,?,?,?,?)");
+                pps.setString(1, NP);
+                pps.setString(2, Manejadora.RECLAMOS.FECHA_COBRO.getText());
+                pps.setString(3, clt);
+                pps.setString(4, tipo);
+                pps.setString(5,  Manejadora.RECLAMOS.TEL_CTO1.getText());
+                pps.executeUpdate();
+                JOptionPane.showMessageDialog(null,"Guardado");
+
+            } catch (SQLException ex) {
+                Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
+            }
+      }
+      /////////////////////////////////////////////////////////////////
+            public void ingresoReclamosGM(String NP, String clt, String tipo){
+      try {
+                PreparedStatement pps = cne.prepareStatement("INSERT INTO `tbl_Reclamos_gm`("
+                +" `IdPolizaRcl_gm`,`FechaRcl_gm`, `ClienteRcl_gm`, "
+                +"`TipoPolizaRcl_gm`, `DescripcionRcl_gm`) VALUES(?,?,?,?,?)");
+                pps.setString(1, NP);
+                pps.setString(2, Manejadora.RECLAMOS.FECHA_COBRO.getText());
+                pps.setString(3, clt);
+                pps.setString(4, tipo);
+                pps.setString(5,  Manejadora.RECLAMOS.TEL_CTO1.getText());
+                pps.executeUpdate();
+                JOptionPane.showMessageDialog(null,"Guardado");
+
+            } catch (SQLException ex) {
+                Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
+            }
+      }
+      /////////////////////////////////////////////////////////////////
+                  public void ingresoReclamosEE(String NP, String clt, String tipo){
+      try {
+                PreparedStatement pps = cne.prepareStatement("INSERT INTO `tbl_Reclamos_ee`("
+                +" `IdPolizaRcl_ee`,`FechaRcl_ee`, `ClienteRcl_ee`, "
+                +"`TipoPolizaRcl_ee`, `DescripcionRcl_ee`) VALUES(?,?,?,?,?)");
+                pps.setString(1, NP);
+                pps.setString(2, Manejadora.RECLAMOS.FECHA_COBRO.getText());
+                pps.setString(3, clt);
+                pps.setString(4, tipo);
+                pps.setString(5,  Manejadora.RECLAMOS.TEL_CTO1.getText());
+                pps.executeUpdate();
+                JOptionPane.showMessageDialog(null,"Guardado");
+
+            } catch (SQLException ex) {
+                Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
+            }
+      }
+      /////////////////////////////////////////////////////////////////
+      public void ingresoReclamosVD(String NP, String clt, String tipo){
+      try {
+                PreparedStatement pps = cne.prepareStatement("INSERT INTO `tbl_Reclamos_vd`("
+                +" `IdPolizaRcl_vd`,`FechaRcl_vd`, `ClienteRcl_vd`, "
+                +"`TipoPolizaRcl_vd`, `DescripcionRcl_vd`) VALUES(?,?,?,?,?)");
+                pps.setString(1, NP);
+                pps.setString(2, Manejadora.RECLAMOS.FECHA_COBRO.getText());
+                pps.setString(3, clt);
+                pps.setString(4, tipo);
+                pps.setString(5,  Manejadora.RECLAMOS.TEL_CTO1.getText());
+                pps.executeUpdate();
+                JOptionPane.showMessageDialog(null,"Guardado");
+
+            } catch (SQLException ex) {
+                Logger.getLogger(PRINCIPAL.class.getName()).log(Level.SEVERE, null, ex);
+            }
+      }
+      /////////////////////////////////////////////////////////////////
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -651,16 +723,16 @@ DefaultTableModel modelo1 = new DefaultTableModel();
     private void initComponents() {
 
         COBRO = new javax.swing.JTabbedPane();
-        MENU1 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        VehiculosMenuBtn = new javax.swing.JButton();
-        GastosMedMenuBtn = new javax.swing.JButton();
-        EquiposMenuBtn = new javax.swing.JButton();
-        SegVidaBtn = new javax.swing.JButton();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        jLabel80 = new javax.swing.JLabel();
+        MENU3 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        VehiculosMenuBtn1 = new javax.swing.JButton();
+        GastosMedMenuBtn1 = new javax.swing.JButton();
+        EquiposMenuBtn1 = new javax.swing.JButton();
+        SegVidaBtn1 = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         MENU2 = new javax.swing.JPanel();
         jPanel25 = new javax.swing.JPanel();
@@ -679,19 +751,13 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         jLabel57 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
         jLabel126 = new javax.swing.JLabel();
-        REQ_COBRO = new javax.swing.JTextField();
-        jLabel120 = new javax.swing.JLabel();
-        jLabel128 = new javax.swing.JLabel();
         jLabel121 = new javax.swing.JLabel();
         IV2IngresarPBtn = new javax.swing.JButton();
-        PRIMA_COBRO = new javax.swing.JTextField();
         FECHA_COBRO = new javax.swing.JTextField();
-        ESTADO_COBRO = new javax.swing.JTextField();
-        jLabel130 = new javax.swing.JLabel();
         IV2AtrasBtn1 = new javax.swing.JButton();
         IV2AtrasBtn2 = new javax.swing.JButton();
-        jLabel122 = new javax.swing.JLabel();
-        IVNoPIngresadoTxt = new javax.swing.JTextField();
+        jScrollPane20 = new javax.swing.JScrollPane();
+        TEL_CTO1 = new javax.swing.JTextArea();
         C_GM1 = new javax.swing.JPanel();
         jLabel67 = new javax.swing.JLabel();
         jScrollPane12 = new javax.swing.JScrollPane();
@@ -731,7 +797,6 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         jLabel70 = new javax.swing.JLabel();
         CGM2VolverBtn1 = new javax.swing.JButton();
         CGM2AtrasBtn3 = new javax.swing.JButton();
-        CGMSalirBtn3 = new javax.swing.JButton();
         jLabel71 = new javax.swing.JLabel();
         CV2CoberturasyCobBtn3 = new javax.swing.JButton();
         jScrollPane11 = new javax.swing.JScrollPane();
@@ -747,166 +812,171 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         CGM2AtrasBtn4 = new javax.swing.JButton();
         CGM2AtrasBtn5 = new javax.swing.JButton();
 
-        COBRO.setBackground(new java.awt.Color(51, 51, 51));
+        setClosable(true);
+        setTitle("RECLAMOS");
 
-        MENU1.setBackground(new java.awt.Color(102, 102, 102));
+        COBRO.setBackground(new java.awt.Color(255, 204, 102));
+        COBRO.setForeground(new java.awt.Color(255, 255, 255));
+        COBRO.setEnabled(false);
 
-        jPanel7.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jPanel7.setOpaque(false);
+        MENU3.setBackground(new java.awt.Color(255, 204, 102));
 
-        VehiculosMenuBtn.setBackground(new java.awt.Color(0, 0, 0));
-        VehiculosMenuBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        VehiculosMenuBtn.setForeground(new java.awt.Color(255, 255, 255));
-        VehiculosMenuBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/coche (1).png"))); // NOI18N
-        VehiculosMenuBtn.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        VehiculosMenuBtn.addActionListener(new java.awt.event.ActionListener() {
+        jPanel8.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel8.setOpaque(false);
+
+        VehiculosMenuBtn1.setBackground(new java.awt.Color(0, 0, 0));
+        VehiculosMenuBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        VehiculosMenuBtn1.setForeground(new java.awt.Color(255, 255, 255));
+        VehiculosMenuBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/coche (1).png"))); // NOI18N
+        VehiculosMenuBtn1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        VehiculosMenuBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VehiculosMenuBtnActionPerformed(evt);
             }
         });
 
-        GastosMedMenuBtn.setBackground(new java.awt.Color(0, 0, 0));
-        GastosMedMenuBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        GastosMedMenuBtn.setForeground(new java.awt.Color(255, 255, 255));
-        GastosMedMenuBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/botiquin-de-primeros-auxilios (2).png"))); // NOI18N
-        GastosMedMenuBtn.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        GastosMedMenuBtn.addActionListener(new java.awt.event.ActionListener() {
+        GastosMedMenuBtn1.setBackground(new java.awt.Color(0, 0, 0));
+        GastosMedMenuBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        GastosMedMenuBtn1.setForeground(new java.awt.Color(255, 255, 255));
+        GastosMedMenuBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/botiquin-de-primeros-auxilios (2).png"))); // NOI18N
+        GastosMedMenuBtn1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        GastosMedMenuBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GastosMedMenuBtnActionPerformed(evt);
             }
         });
 
-        EquiposMenuBtn.setBackground(new java.awt.Color(0, 0, 0));
-        EquiposMenuBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        EquiposMenuBtn.setForeground(new java.awt.Color(255, 255, 255));
-        EquiposMenuBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/maquinaria.png"))); // NOI18N
-        EquiposMenuBtn.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        EquiposMenuBtn.addActionListener(new java.awt.event.ActionListener() {
+        EquiposMenuBtn1.setBackground(new java.awt.Color(0, 0, 0));
+        EquiposMenuBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        EquiposMenuBtn1.setForeground(new java.awt.Color(255, 255, 255));
+        EquiposMenuBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/maquinaria.png"))); // NOI18N
+        EquiposMenuBtn1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        EquiposMenuBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EquiposMenuBtnActionPerformed(evt);
             }
         });
 
-        SegVidaBtn.setBackground(new java.awt.Color(0, 0, 0));
-        SegVidaBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        SegVidaBtn.setForeground(new java.awt.Color(255, 255, 255));
-        SegVidaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/corazon (3).png"))); // NOI18N
-        SegVidaBtn.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        SegVidaBtn.addActionListener(new java.awt.event.ActionListener() {
+        SegVidaBtn1.setBackground(new java.awt.Color(0, 0, 0));
+        SegVidaBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        SegVidaBtn1.setForeground(new java.awt.Color(255, 255, 255));
+        SegVidaBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/corazon (3).png"))); // NOI18N
+        SegVidaBtn1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        SegVidaBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SegVidaBtnActionPerformed(evt);
             }
         });
 
-        jLabel20.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel20.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("VEHICULOS");
-        jLabel20.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jLabel21.setBackground(new java.awt.Color(0, 0, 51));
+        jLabel21.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("VEHICULOS");
+        jLabel21.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        jLabel61.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel61.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
-        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel61.setText("EQUIPOS");
-        jLabel61.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jLabel62.setBackground(new java.awt.Color(0, 0, 51));
+        jLabel62.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
+        jLabel62.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel62.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel62.setText("EQUIPOS");
+        jLabel62.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        jLabel64.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel64.setFont(new java.awt.Font("Segoe UI Historic", 1, 26)); // NOI18N
-        jLabel64.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel64.setText("GASTOS MEDICOS");
-        jLabel64.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jLabel65.setBackground(new java.awt.Color(0, 0, 51));
+        jLabel65.setFont(new java.awt.Font("Segoe UI Historic", 1, 26)); // NOI18N
+        jLabel65.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel65.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel65.setText("GASTOS MEDICOS");
+        jLabel65.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        jLabel80.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel80.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
-        jLabel80.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel80.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel80.setText("SEG. DE VIDA");
-        jLabel80.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jLabel81.setBackground(new java.awt.Color(0, 0, 51));
+        jLabel81.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
+        jLabel81.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel81.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel81.setText("SEG. DE VIDA");
+        jLabel81.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EquiposMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(VehiculosMenuBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EquiposMenuBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(VehiculosMenuBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 189, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel64, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(GastosMedMenuBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel80, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(SegVidaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel65, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(GastosMedMenuBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel81, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SegVidaBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(100, 100, 100))
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(39, 39, 39)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(GastosMedMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(GastosMedMenuBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(175, 175, 175))
-                            .addComponent(SegVidaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SegVidaBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(1, 1, 1)
-                        .addComponent(VehiculosMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(VehiculosMenuBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43)
-                        .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(1, 1, 1)
-                        .addComponent(EquiposMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(EquiposMenuBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
         jLabel12.setBackground(new java.awt.Color(0, 0, 51));
         jLabel12.setFont(new java.awt.Font("Segoe UI Historic", 1, 40)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Menú");
         jLabel12.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        javax.swing.GroupLayout MENU1Layout = new javax.swing.GroupLayout(MENU1);
-        MENU1.setLayout(MENU1Layout);
-        MENU1Layout.setHorizontalGroup(
-            MENU1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MENU1Layout.createSequentialGroup()
-                .addGap(310, 310, 310)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(654, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MENU1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout MENU3Layout = new javax.swing.GroupLayout(MENU3);
+        MENU3.setLayout(MENU3Layout);
+        MENU3Layout.setHorizontalGroup(
+            MENU3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MENU3Layout.createSequentialGroup()
+                .addContainerGap(267, Short.MAX_VALUE)
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(204, 204, 204))
+            .addGroup(MENU3Layout.createSequentialGroup()
+                .addGap(468, 468, 468)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        MENU1Layout.setVerticalGroup(
-            MENU1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MENU1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+        MENU3Layout.setVerticalGroup(
+            MENU3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MENU3Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
-        COBRO.addTab("MENU", MENU1);
+        COBRO.addTab("MENU", MENU3);
 
-        MENU2.setBackground(new java.awt.Color(102, 102, 102));
+        MENU2.setBackground(new java.awt.Color(255, 204, 102));
 
         jPanel25.setBackground(new java.awt.Color(0, 0, 0));
         jPanel25.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -958,28 +1028,28 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         jLabel75.setBackground(new java.awt.Color(0, 0, 51));
         jLabel75.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
-        jLabel75.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel75.setForeground(new java.awt.Color(0, 0, 0));
         jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel75.setText("INGRESO");
         jLabel75.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel76.setBackground(new java.awt.Color(0, 0, 51));
         jLabel76.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
-        jLabel76.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel76.setForeground(new java.awt.Color(0, 0, 0));
         jLabel76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel76.setText("ELIMINACION");
         jLabel76.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel77.setBackground(new java.awt.Color(0, 0, 51));
         jLabel77.setFont(new java.awt.Font("Segoe UI Historic", 1, 31)); // NOI18N
-        jLabel77.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel77.setForeground(new java.awt.Color(0, 0, 0));
         jLabel77.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel77.setText("MODIFICACION");
         jLabel77.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel78.setBackground(new java.awt.Color(0, 0, 51));
         jLabel78.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
-        jLabel78.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel78.setForeground(new java.awt.Color(0, 0, 0));
         jLabel78.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel78.setText("CONSULTA");
         jLabel78.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -997,11 +1067,15 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(ConsultaMenu2Btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51)
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ModificacionMenu2Btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(66, 66, 66)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(ModificacionMenu2Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(66, 66, 66))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)))
                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(EliminarMenu2Btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1052,7 +1126,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         jLabel79.setBackground(new java.awt.Color(0, 0, 51));
         jLabel79.setFont(new java.awt.Font("Segoe UI Historic", 1, 40)); // NOI18N
-        jLabel79.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel79.setForeground(new java.awt.Color(0, 0, 0));
         jLabel79.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel79.setText("Menú");
         jLabel79.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -1091,13 +1165,13 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         COBRO.addTab("MENU 2", MENU2);
 
-        COBROS.setBackground(new java.awt.Color(102, 102, 102));
+        COBROS.setBackground(new java.awt.Color(255, 204, 102));
 
         jLabel57.setBackground(new java.awt.Color(0, 0, 51));
         jLabel57.setFont(new java.awt.Font("Segoe UI Historic", 1, 36)); // NOI18N
-        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel57.setForeground(new java.awt.Color(0, 0, 0));
         jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel57.setText("INGRESO DE COBROS");
+        jLabel57.setText("INGRESO DE RECLAMOS");
         jLabel57.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel29.setBackground(new java.awt.Color(0, 0, 51));
@@ -1106,39 +1180,16 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         jLabel126.setBackground(new java.awt.Color(0, 0, 51));
         jLabel126.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        jLabel126.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel126.setForeground(new java.awt.Color(0, 0, 0));
         jLabel126.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel126.setText("COBRO");
+        jLabel126.setText("DESCRPCION");
         jLabel126.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        REQ_COBRO.setFont(new java.awt.Font("Segoe UI Historic", 1, 16)); // NOI18N
-        REQ_COBRO.setForeground(new java.awt.Color(0, 0, 51));
-        REQ_COBRO.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        REQ_COBRO.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                REQ_COBROActionPerformed(evt);
-            }
-        });
-
-        jLabel120.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel120.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        jLabel120.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel120.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel120.setText("No. RREQUERIMIENTO");
-        jLabel120.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        jLabel128.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel128.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        jLabel128.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel128.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel128.setText("PRIMA");
-        jLabel128.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel121.setBackground(new java.awt.Color(0, 0, 51));
         jLabel121.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        jLabel121.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel121.setForeground(new java.awt.Color(0, 0, 0));
         jLabel121.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel121.setText("FECHA DE PAGO");
+        jLabel121.setText("FECHA DE RECLAMO");
         jLabel121.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         IV2IngresarPBtn.setBackground(new java.awt.Color(0, 0, 0));
@@ -1151,24 +1202,9 @@ DefaultTableModel modelo1 = new DefaultTableModel();
             }
         });
 
-        PRIMA_COBRO.setFont(new java.awt.Font("Segoe UI Historic", 1, 16)); // NOI18N
-        PRIMA_COBRO.setForeground(new java.awt.Color(0, 0, 51));
-        PRIMA_COBRO.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
         FECHA_COBRO.setFont(new java.awt.Font("Segoe UI Historic", 1, 16)); // NOI18N
         FECHA_COBRO.setForeground(new java.awt.Color(0, 0, 51));
         FECHA_COBRO.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        ESTADO_COBRO.setFont(new java.awt.Font("Segoe UI Historic", 1, 16)); // NOI18N
-        ESTADO_COBRO.setForeground(new java.awt.Color(0, 0, 51));
-        ESTADO_COBRO.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        jLabel130.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel130.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        jLabel130.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel130.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel130.setText("ESTADO ");
-        jLabel130.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         IV2AtrasBtn1.setBackground(new java.awt.Color(0, 0, 0));
         IV2AtrasBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
@@ -1190,64 +1226,48 @@ DefaultTableModel modelo1 = new DefaultTableModel();
             }
         });
 
+        TEL_CTO1.setColumns(20);
+        TEL_CTO1.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
+        TEL_CTO1.setRows(5);
+        jScrollPane20.setViewportView(TEL_CTO1);
+
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
         jPanel29Layout.setHorizontalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel29Layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(IV2AtrasBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(IV2IngresarPBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 188, Short.MAX_VALUE)
-                        .addComponent(IV2AtrasBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(19, 19, 19))
-                    .addGroup(jPanel29Layout.createSequentialGroup()
-                        .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel29Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel29Layout.createSequentialGroup()
-                                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel130, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jLabel120, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel121, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel128, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(REQ_COBRO)
-                                        .addComponent(FECHA_COBRO)
-                                        .addComponent(PRIMA_COBRO, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(ESTADO_COBRO, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(134, 134, 134)
+                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(IV2AtrasBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(IV2IngresarPBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 188, Short.MAX_VALUE)
+                .addComponent(IV2AtrasBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19))
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addGap(102, 102, 102)
+                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel121, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(FECHA_COBRO, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(jLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REQ_COBRO, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel120, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(91, 91, 91)
                 .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(FECHA_COBRO, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel121, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PRIMA_COBRO, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel128, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel130, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ESTADO_COBRO, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(IV2IngresarPBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(IV2AtrasBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1256,61 +1276,38 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 .addContainerGap())
         );
 
-        jLabel122.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel122.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
-        jLabel122.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel122.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel122.setText("No.  PAGOS INGRESADOS");
-        jLabel122.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        IVNoPIngresadoTxt.setEditable(false);
-        IVNoPIngresadoTxt.setFont(new java.awt.Font("Segoe UI Historic", 1, 16)); // NOI18N
-        IVNoPIngresadoTxt.setForeground(new java.awt.Color(0, 0, 51));
-        IVNoPIngresadoTxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
         javax.swing.GroupLayout COBROSLayout = new javax.swing.GroupLayout(COBROS);
         COBROS.setLayout(COBROSLayout);
         COBROSLayout.setHorizontalGroup(
             COBROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(COBROSLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
                 .addGroup(COBROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(COBROSLayout.createSequentialGroup()
-                        .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(COBROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel122, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, COBROSLayout.createSequentialGroup()
-                                .addComponent(IVNoPIngresadoTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(68, 68, 68))))
+                        .addGap(214, 214, 214)
+                        .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(COBROSLayout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(210, Short.MAX_VALUE))
+                        .addGap(172, 172, 172)
+                        .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(340, Short.MAX_VALUE))
         );
         COBROSLayout.setVerticalGroup(
             COBROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(COBROSLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(COBROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(COBROSLayout.createSequentialGroup()
-                        .addGap(93, 93, 93)
-                        .addComponent(IVNoPIngresadoTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel122, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        COBRO.addTab("I COBROS", COBROS);
+        COBRO.addTab("RECLAMOS", COBROS);
 
-        C_GM1.setBackground(new java.awt.Color(102, 102, 102));
+        C_GM1.setBackground(new java.awt.Color(255, 204, 102));
         C_GM1.setPreferredSize(new java.awt.Dimension(1530, 950));
 
         jLabel67.setBackground(new java.awt.Color(0, 0, 51));
         jLabel67.setFont(new java.awt.Font("Segoe UI Historic", 1, 36)); // NOI18N
-        jLabel67.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel67.setForeground(new java.awt.Color(0, 0, 0));
         jLabel67.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel67.setText("SELECCION DE POLIZA");
         jLabel67.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -1373,7 +1370,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                     .addGroup(C_GM1Layout.createSequentialGroup()
                         .addGap(283, 283, 283)
                         .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addContainerGap(620, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, C_GM1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(CGM2VolverBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1393,11 +1390,11 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         COBRO.addTab("CONSULTA", C_GM1);
 
-        C_GM2.setBackground(new java.awt.Color(102, 102, 102));
+        C_GM2.setBackground(new java.awt.Color(255, 204, 102));
 
         jLabel68.setBackground(new java.awt.Color(0, 0, 51));
         jLabel68.setFont(new java.awt.Font("Segoe UI Historic", 1, 36)); // NOI18N
-        jLabel68.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel68.setForeground(new java.awt.Color(0, 0, 0));
         jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel68.setText("GASTOS MEDICOS");
         jLabel68.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -1434,7 +1431,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         jLabel69.setBackground(new java.awt.Color(0, 0, 51));
         jLabel69.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
-        jLabel69.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel69.setForeground(new java.awt.Color(0, 0, 0));
         jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel69.setText("INFORMACION");
         jLabel69.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -1540,13 +1537,13 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         COBRO.addTab("GASTOS MED", C_GM2);
 
-        jPanel46.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel46.setBackground(new java.awt.Color(255, 204, 102));
         jPanel46.setMaximumSize(new java.awt.Dimension(1530, 943));
         jPanel46.setPreferredSize(new java.awt.Dimension(1530, 943));
 
         jLabel94.setBackground(new java.awt.Color(0, 0, 51));
         jLabel94.setFont(new java.awt.Font("Segoe UI Historic", 1, 36)); // NOI18N
-        jLabel94.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel94.setForeground(new java.awt.Color(0, 0, 0));
         jLabel94.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel94.setText("SEGUROS DE VIDA");
         jLabel94.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -1573,7 +1570,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         jLabel96.setBackground(new java.awt.Color(0, 0, 51));
         jLabel96.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
-        jLabel96.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel96.setForeground(new java.awt.Color(0, 0, 0));
         jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel96.setText("INFORMACION");
         jLabel96.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -1627,7 +1624,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel46Layout.createSequentialGroup()
                         .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(473, 669, Short.MAX_VALUE))
+                        .addGap(473, 1062, Short.MAX_VALUE))
                     .addGroup(jPanel46Layout.createSequentialGroup()
                         .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1641,7 +1638,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                             .addComponent(jLabel98, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane26))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CV2CoberturasyCobBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                        .addComponent(CV2CoberturasyCobBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)
                         .addGap(427, 427, 427))))
         );
         jPanel46Layout.setVerticalGroup(
@@ -1669,11 +1666,11 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         COBRO.addTab("VIDA", jPanel46);
 
-        C_VEHICULOS2.setBackground(new java.awt.Color(102, 102, 102));
+        C_VEHICULOS2.setBackground(new java.awt.Color(255, 204, 102));
 
         jLabel16.setBackground(new java.awt.Color(0, 0, 51));
         jLabel16.setFont(new java.awt.Font("Segoe UI Historic", 1, 36)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("VEHICULOS");
         jLabel16.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -1769,11 +1766,11 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         COBRO.addTab("VEHICULOS", C_VEHICULOS2);
 
-        C_GM4.setBackground(new java.awt.Color(102, 102, 102));
+        C_GM4.setBackground(new java.awt.Color(255, 204, 102));
 
         jLabel70.setBackground(new java.awt.Color(0, 0, 51));
         jLabel70.setFont(new java.awt.Font("Segoe UI Historic", 1, 36)); // NOI18N
-        jLabel70.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel70.setForeground(new java.awt.Color(0, 0, 0));
         jLabel70.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel70.setText("EQUIPO ELECTRONICO");
         jLabel70.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -1798,19 +1795,9 @@ DefaultTableModel modelo1 = new DefaultTableModel();
             }
         });
 
-        CGMSalirBtn3.setBackground(new java.awt.Color(51, 0, 0));
-        CGMSalirBtn3.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CGMSalirBtn3.setForeground(new java.awt.Color(255, 255, 255));
-        CGMSalirBtn3.setText("SALIR");
-        CGMSalirBtn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CGMSalirBtn3ActionPerformed(evt);
-            }
-        });
-
         jLabel71.setBackground(new java.awt.Color(0, 0, 51));
         jLabel71.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
-        jLabel71.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel71.setForeground(new java.awt.Color(0, 0, 0));
         jLabel71.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel71.setText("INFORMACION");
         jLabel71.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -1878,11 +1865,9 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(CV2CoberturasyCobBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(128, 128, 128)))
-                .addGroup(C_GM4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CGMSalirBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(C_GM4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(CGM2AtrasBtn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CGM2VolverBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(C_GM4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CGM2AtrasBtn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CGM2VolverBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(412, 412, 412))
         );
         C_GM4Layout.setVerticalGroup(
@@ -1901,9 +1886,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                         .addComponent(CGM2VolverBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(CGM2AtrasBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(CGMSalirBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23)
+                        .addGap(93, 93, 93)
                         .addComponent(CV2CoberturasyCobBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1914,7 +1897,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         COBRO.addTab("EQUIPO ELECTRONICO", C_GM4);
 
-        C_GM3.setBackground(new java.awt.Color(102, 102, 102));
+        C_GM3.setBackground(new java.awt.Color(255, 204, 102));
 
         CGM2AtrasBtn1.setBackground(new java.awt.Color(0, 0, 0));
         CGM2AtrasBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
@@ -1928,9 +1911,9 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         jLabel82.setBackground(new java.awt.Color(204, 102, 0));
         jLabel82.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
-        jLabel82.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel82.setForeground(new java.awt.Color(0, 0, 0));
         jLabel82.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel82.setText("COBROS");
+        jLabel82.setText("RECLAMOS");
 
         TBL_CBR.setBackground(new java.awt.Color(0, 0, 51));
         TBL_CBR.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
@@ -1988,7 +1971,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                         .addComponent(CGM2AtrasBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(CGM2AtrasBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(206, Short.MAX_VALUE))
+                .addContainerGap(599, Short.MAX_VALUE))
         );
         C_GM3Layout.setVerticalGroup(
             C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2013,8 +1996,9 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(COBRO, javax.swing.GroupLayout.PREFERRED_SIZE, 1332, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(COBRO, javax.swing.GroupLayout.PREFERRED_SIZE, 1332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2134,13 +2118,9 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         // TODO add your handling code here:
     }//GEN-LAST:event_SalirMenu2BtnActionPerformed
 
-    private void REQ_COBROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REQ_COBROActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REQ_COBROActionPerformed
-
     private void IV2IngresarPBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IV2IngresarPBtnActionPerformed
-
-        if(REQ_COBRO.getText().equals("")|| FECHA_COBRO.getText().equals("") )
+        
+        if(FECHA_COBRO.getText().equals(""))
         {
             JOptionPane.showMessageDialog(null,"Por favor rellene los siguientes campos:\n- No Requerimiento.\n- Fecha.");
         }else{
@@ -2148,30 +2128,21 @@ DefaultTableModel modelo1 = new DefaultTableModel();
             {
                 case 1:
                 mostrar_tabla2();
-                i++;
-                IVNoPIngresadoTxt.setText(""+ i);
-                Ingresos     cobros =new Ingresos();
-                cobros.ingresoCobrosV(i,TblCV2.getValueAt(7, 1).toString(),TblCV2.getValueAt(2, 1).toString(),TblCV2.getValueAt(1, 1).toString());
+                ingresoReclamosV(TblCV2.getValueAt(2, 1).toString(),TblCV2.getValueAt(7, 1).toString(),"Vehiculos");
+                COBRO.setSelectedIndex(3);
                 break;
+                
                 case 2:
                 mostrar_tabla3();
-                i++;
-                IVNoPIngresadoTxt.setText(""+ i);
-                Ingresos cbr = new Ingresos();
-                cbr.ingresoCobrosGM(i,TblGM2.getValueAt(1, 1).toString(),TblGM2.getValueAt(2, 1).toString());
+                ingresoReclamosGM(TblGM2.getValueAt(2, 1).toString(),TblGM2.getValueAt(1, 1).toString(),"Gastos Medicos");
                 COBRO.setSelectedIndex(3); break;
+                
                 case 3:
-                i++;
-                IVNoPIngresadoTxt.setText(""+ i);
-                Ingresos cbree = new Ingresos();
-                cbree.ingresoCobrosee(i,TBLC_COBROS.getValueAt(TBLC_COBROS.getSelectedRow(), 0).toString(),TBLC_COBROS.getValueAt(TBLC_COBROS.getSelectedRow(), 1).toString());
+                ingresoReclamosEE(TBLC_COBROS.getValueAt(TBLC_COBROS.getSelectedRow(),1).toString(),TBLC_COBROS.getValueAt(TBLC_COBROS.getSelectedRow(),0).toString(),"Equipo Electronico");
                 COBRO.setSelectedIndex(3);
                 mostrar_tabla7();break;
                 case 4:
-                i++;
-                IVNoPIngresadoTxt.setText(""+ i);
-                Ingresos cbrvd = new Ingresos();
-                cbrvd.ingresoCobrosvd(i,TBL_VD2.getValueAt(0, 1).toString(),TBL_VD2.getValueAt(2, 1).toString());
+                ingresoReclamosVD(TBL_VD2.getValueAt(2, 1).toString(),TBL_VD2.getValueAt(0, 1).toString(),"Vida");
                 COBRO.setSelectedIndex(3);break;
             }}
     }//GEN-LAST:event_IV2IngresarPBtnActionPerformed
@@ -2183,7 +2154,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
     private void IV2AtrasBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IV2AtrasBtn2ActionPerformed
 
-        if(REQ_COBRO.getText().equals("")|| FECHA_COBRO.getText().equals("") )
+        if( FECHA_COBRO.getText().equals("") )
         {
             JOptionPane.showMessageDialog(null,"Por favor rellene los siguientes campos:\n- No Requerimiento.\n- Fecha.");
         }else{
@@ -2191,12 +2162,11 @@ DefaultTableModel modelo1 = new DefaultTableModel();
             {
                 case 1:
                 try {
-                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),3));
-                    String sql = "UPDATE tbl_cobros_vhl SET "
-                    + "FPago_cbrvhl='"+FECHA_COBRO.getText()
-                    + "',Prima_cbrvhl='"+PRIMA_COBRO.getText()
-                    + "',EstadoPago_cbrvhl='"+ESTADO_COBRO.getText()
-                    + "' WHERE NoRequerimiento_cbrvhl ="+id+"";
+                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),0));
+                  String sql = "UPDATE tbl_reclamos_vhl SET "
+                    + "FechaRcl_vhl='"+FECHA_COBRO.getText()
+                    + "',DescripcionRcl_vhl='"+TEL_CTO1.getText()
+                    + "' WHERE IdReclamo_vhl ="+id+"";
 
                     PreparedStatement pps = cn.prepareStatement(sql);
                     pps.executeUpdate();
@@ -2215,12 +2185,11 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 case 2:
 
                 try {
-                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),2));
-                    String sql = "UPDATE tbl_cobros_gm SET "
-                    + "FechaPago_cbrgm='"+FECHA_COBRO.getText()
-                    + "',Prima_cbrgm='"+PRIMA_COBRO.getText()
-                    + "',EstadoPago_cbrgm='"+ESTADO_COBRO.getText()
-                    + "' WHERE NoRequerimiento_cbrgm="+id+"";
+                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),0));
+                    String sql = "UPDATE tbl_reclamos_gm SET "
+                    + "FechaRcl_gm='"+FECHA_COBRO.getText()
+                    + "',DescripcionRcl_gm='"+TEL_CTO1.getText()
+                    + "' WHERE IdReclamo_gm ="+id+"";
 
                     PreparedStatement pps = cn.prepareStatement(sql);
                     pps.executeUpdate();
@@ -2238,12 +2207,11 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 break;
                 case 3:
                 try {
-                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),2));
-                    String sql = "UPDATE tbl_cobros_ee SET "
-                    + "FechaPago_cbree='"+FECHA_COBRO.getText()
-                    + "',Prima_cbree='"+PRIMA_COBRO.getText()
-                    + "',EstadoPago_cbree='"+ESTADO_COBRO.getText()
-                    + "' WHERE NoRequerimiento_cbree="+id+"";
+                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),0));
+                    String sql = "UPDATE tbl_reclamos_ee SET "
+                    + "FechaRcl_ee='"+FECHA_COBRO.getText()
+                    + "',DescripcionRcl_ee='"+TEL_CTO1.getText()
+                    + "' WHERE IdReclamo_ee ="+id+"";
 
                     PreparedStatement pps = cn.prepareStatement(sql);
                     pps.executeUpdate();
@@ -2261,12 +2229,12 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 break;
                 case 4:
                 try {
-                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),2));
-                    String sql = "UPDATE tbl_cobros_vd SET "
-                    + "FechaPago_cbrvd='"+FECHA_COBRO.getText()
-                    + "',Prima_cbrvd='"+PRIMA_COBRO.getText()
-                    + "',EstadoPago_cbrvd='"+ESTADO_COBRO.getText()
-                    + "' WHERE NoRequerimiento_cbrvd="+id+"";
+                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),0));
+                     String sql = "UPDATE tbl_reclamos_vd SET "
+                    + "FechaRcl_vd='"+FECHA_COBRO.getText()
+                    + "',DescripcionRcl_vd='"+TEL_CTO1.getText()
+                    + "' WHERE IdReclamo_vd ="+id+"";
+
 
                     PreparedStatement pps = cn.prepareStatement(sql);
                     pps.executeUpdate();
@@ -2435,15 +2403,10 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         COBRO.setSelectedIndex(3);
     }//GEN-LAST:event_CGM2AtrasBtn3ActionPerformed
 
-    private void CGMSalirBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGMSalirBtn3ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CGMSalirBtn3ActionPerformed
-
     private void CV2CoberturasyCobBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV2CoberturasyCobBtn3ActionPerformed
         switch(Ingresos)
         {
             case 1:
-
             COBRO.setSelectedIndex(2); break;
             default:
             int fila  = TBLC_COBROS.getSelectedRow();
@@ -2468,18 +2431,15 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         if (menu==1){int fila= TBL_CBR.getSelectedRow();
             IV2AtrasBtn2.setEnabled(true);
             IV2IngresarPBtn.setEnabled(false);
-            if(fila<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}else{
-                REQ_COBRO.setText(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(), 3).toString());
-                FECHA_COBRO.setText(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(), 4).toString());
-                PRIMA_COBRO.setText(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(), 5).toString());
-                ESTADO_COBRO.setText(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(), 7).toString());
-                COBRO.setSelectedIndex(2);}}else{
+            if(fila<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN RECLAMO");}else{
+                TEL_CTO1.setText(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(), 5).toString());
+                FECHA_COBRO.setText(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(), 2).toString());
+                COBRO.setSelectedIndex(2);
+              }}else{
             int fila= TBL_CBR.getSelectedRow();
-            if(fila<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}else{
-                REQ_COBRO.setText(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(), 2).toString());
-                FECHA_COBRO.setText(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(), 3).toString());
-                PRIMA_COBRO.setText(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(), 4).toString());
-                ESTADO_COBRO.setText(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(), 6).toString());
+            if(fila<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN RECLAMO");}else{
+                TEL_CTO1.setText(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(), 5).toString());
+                FECHA_COBRO.setText(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(), 2).toString());
                 COBRO.setSelectedIndex(2);}
         }
 
@@ -2495,8 +2455,8 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 if(TBL_CBR.getSelectedRow()<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}else{
                     String NoPol;
                     int filavhl  = TBL_CBR.getSelectedRow();
-                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),3));
-                    String sql = "DELETE  FROM tbl_cobros_vhl  WHERE NoRequerimiento_cbrvhl ="+id+"";
+                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),0));
+                    String sql = "DELETE  FROM tbl_reclamos_vhl  WHERE IdReclamo_vhl ="+id+"";
                     PreparedStatement pps = cn.prepareStatement(sql);
                     pps.executeUpdate();
                     JOptionPane.showMessageDialog(null,"ELIMINADO");
@@ -2515,8 +2475,8 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 int filagm  = TBL_CBR.getSelectedRow();
                 String NoPolgm;
                 if(filagm<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}else{
-                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),2));
-                    String sql = "DELETE FROM tbl_cobros_gm WHERE NoRequerimiento_cbrgm="+id+"";
+                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),0));
+                    String sql = "DELETE FROM tbl_reclamos_gm WHERE IdReclamo_gm ="+id+"";
                     COBRO.setSelectedIndex(8);
                     PreparedStatement pps = cn.prepareStatement(sql);
                     pps.executeUpdate();
@@ -2535,8 +2495,8 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 if(filaee<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}else{
 
                     NoPolee = valueOf(TBL_CBR.getValueAt(filaee, 1));
-                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),2));
-                    String sql = "DELETE FROM tbl_cobros_ee WHERE NoRequerimiento_cbree="+id+"";
+                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),0));
+                    String sql = "DELETE FROM tbl_reclamos_ee WHERE IdReclamo_ee ="+id+"";
                     PreparedStatement pps = cn.prepareStatement(sql);
                     pps.executeUpdate();
                     cee2(NoPolee);
@@ -2553,8 +2513,8 @@ DefaultTableModel modelo1 = new DefaultTableModel();
                 int filavd  = TBL_CBR.getSelectedRow();
                 String NoPolvd;
                 if(filavd<0){JOptionPane.showMessageDialog(null,"NO HA SELECCIONADO UN COBRO");}else{
-                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),2));
-                    String sql = "DELETE FROM tbl_cobros_vd WHERE NoRequerimiento_cbrvd="+id+"";
+                    String id = valueOf(TBL_CBR.getValueAt(TBL_CBR.getSelectedRow(),0));
+                    String sql = "DELETE FROM tbl_reclamos_vd WHERE IdReclamo_vd ="+id+"";
 
                     PreparedStatement pps = cn.prepareStatement(sql);
                     pps.executeUpdate();
@@ -2587,7 +2547,6 @@ DefaultTableModel modelo1 = new DefaultTableModel();
     private javax.swing.JButton CGM2VolverBtn3;
     private javax.swing.JButton CGM2VolverBtn4;
     private javax.swing.JButton CGMSalirBtn;
-    private javax.swing.JButton CGMSalirBtn3;
     private javax.swing.JTabbedPane COBRO;
     private javax.swing.JPanel COBROS;
     private javax.swing.JButton CV2CoberturasyCobBtn;
@@ -2603,43 +2562,36 @@ DefaultTableModel modelo1 = new DefaultTableModel();
     private javax.swing.JButton ConsultaMenu2Btn;
     public static javax.swing.JTextArea DESC_EE2;
     public static javax.swing.JTextArea DESC_VD2;
-    public static javax.swing.JTextField ESTADO_COBRO;
     private javax.swing.JButton EliminarMenu2Btn;
-    private javax.swing.JButton EquiposMenuBtn;
+    private javax.swing.JButton EquiposMenuBtn1;
     public static javax.swing.JTextField FECHA_COBRO;
-    private javax.swing.JButton GastosMedMenuBtn;
+    private javax.swing.JButton GastosMedMenuBtn1;
     public static javax.swing.JTextArea IIGM1DescTxt1;
     private javax.swing.JButton IV2AtrasBtn1;
     private javax.swing.JButton IV2AtrasBtn2;
     private javax.swing.JButton IV2IngresarPBtn;
-    private javax.swing.JTextField IVNoPIngresadoTxt;
     private javax.swing.JButton IngresosMenu2Btn;
-    private javax.swing.JPanel MENU1;
     private javax.swing.JPanel MENU2;
+    private javax.swing.JPanel MENU3;
     private javax.swing.JButton ModificacionMenu2Btn;
-    public static javax.swing.JTextField PRIMA_COBRO;
-    public static javax.swing.JTextField REQ_COBRO;
     private javax.swing.JButton SalirMenu2Btn;
-    private javax.swing.JButton SegVidaBtn;
+    private javax.swing.JButton SegVidaBtn1;
     public static javax.swing.JTable TBLC_COBROS;
     public static javax.swing.JTable TBL_CBR;
     public static javax.swing.JTable TBL_EE2;
     public static javax.swing.JTable TBL_VD2;
+    public static javax.swing.JTextArea TEL_CTO1;
     public static javax.swing.JTable TblCV2;
     public static javax.swing.JTable TblGM2;
-    private javax.swing.JButton VehiculosMenuBtn;
+    private javax.swing.JButton VehiculosMenuBtn1;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel120;
     private javax.swing.JLabel jLabel121;
-    private javax.swing.JLabel jLabel122;
     private javax.swing.JLabel jLabel126;
-    private javax.swing.JLabel jLabel128;
-    private javax.swing.JLabel jLabel130;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
@@ -2650,7 +2602,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
-    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
@@ -2660,12 +2612,13 @@ DefaultTableModel modelo1 = new DefaultTableModel();
     private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel46;
-    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane16;
+    private javax.swing.JScrollPane jScrollPane20;
     private javax.swing.JScrollPane jScrollPane25;
     private javax.swing.JScrollPane jScrollPane26;
     private javax.swing.JScrollPane jScrollPane5;
