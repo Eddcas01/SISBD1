@@ -180,7 +180,7 @@ public  static int tipo;
         jMenu1.add(jMenuItem7);
 
         jMenuItem11.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
-        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/ambulancia (2).png"))); // NOI18N
+        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/catalogo-de-piezas-rectangulares-en-contornos.png"))); // NOI18N
         jMenuItem11.setText("CATALOGO");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

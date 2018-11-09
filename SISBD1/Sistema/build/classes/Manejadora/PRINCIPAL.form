@@ -180,7 +180,7 @@
                   <Font name="Segoe UI Historic" size="14" style="1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/ICONS/ambulancia (2).png"/>
+                  <Image iconType="3" name="/ICONS/catalogo-de-piezas-rectangulares-en-contornos.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="CATALOGO"/>
               </Properties>
