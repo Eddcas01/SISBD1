@@ -122,14 +122,15 @@ public class Ingresos {
             }
     }
       ////////////////////////////////////////////////////////////////
+
       public void ingresoCobrosV(int i,String id, String NP, String idpol){
       try {
                 PreparedStatement pps = cne.prepareStatement("INSERT INTO `tbl_cobros_vhl`(`IdCliente_cbrvhl`,"
                 +" `IdPolizaVhl_cbrvhl`, `NoPoliza_cbr`, `NoRequerimiento_cbrvhl`, `FPago_cbrvhl`, `Prima_cbrvhl`, "
                 +"`NoPago_cbrvhl`, `EstadoPago_cbrvhl`) VALUES(?,?,?,?,?,?,?,?)");
                 pps.setString(1, id);
-                pps.setString(2, NP);
-                pps.setString(3, idpol);
+                pps.setString(2, idpol);
+                pps.setString(3, NP);
                 pps.setString(4,  Manejadora.COBROS.REQ_COBRO.getText());
                 pps.setString(5,  Manejadora.COBROS.FECHA_COBRO.getText());
                 pps.setString(6,  Manejadora.COBROS.PRIMA_COBRO.getText());

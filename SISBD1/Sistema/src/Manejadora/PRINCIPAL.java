@@ -50,6 +50,7 @@ public  static int tipo;
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
@@ -159,7 +160,7 @@ public  static int tipo;
         jMenu1.add(jMenuItem6);
 
         jMenuItem13.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
-        jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/archivo (3).png"))); // NOI18N
+        jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/contrato.png"))); // NOI18N
         jMenuItem13.setText("RECLAMOS");
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,6 +178,16 @@ public  static int tipo;
             }
         });
         jMenu1.add(jMenuItem7);
+
+        jMenuItem11.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
+        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/ambulancia (2).png"))); // NOI18N
+        jMenuItem11.setText("CATALOGO");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem11);
 
         jMenuItem8.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/paisaje-urbano (1).png"))); // NOI18N
@@ -377,6 +388,18 @@ public  static int tipo;
    rcl1.tipo =tipo;
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+     CATALOGO CAT = new CATALOGO();
+   DESK.add(CAT);
+   CAT.show();
+   CAT.tipo=tipo;
+   CAT.setVisible(false);
+ CATALOGO CAT1 = new CATALOGO();
+   DESK.add(CAT1);
+   CAT1.show();
+   CAT1.tipo=tipo;
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -425,6 +448,7 @@ public  static int tipo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem2;

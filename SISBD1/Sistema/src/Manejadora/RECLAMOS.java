@@ -1195,7 +1195,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         IV2IngresarPBtn.setBackground(new java.awt.Color(0, 0, 0));
         IV2IngresarPBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         IV2IngresarPBtn.setForeground(new java.awt.Color(255, 255, 255));
-        IV2IngresarPBtn.setText("INGRESAR PAGO");
+        IV2IngresarPBtn.setText("INGRESAR RECLAMO");
         IV2IngresarPBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IV2IngresarPBtnActionPerformed(evt);
@@ -1468,7 +1468,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         jLabel88.setBackground(new java.awt.Color(0, 0, 51));
         jLabel88.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        jLabel88.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel88.setForeground(new java.awt.Color(0, 0, 0));
         jLabel88.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel88.setText("DESCRIPCION COBERTURAS");
         jLabel88.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -1606,7 +1606,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         jLabel98.setBackground(new java.awt.Color(0, 0, 51));
         jLabel98.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        jLabel98.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel98.setForeground(new java.awt.Color(0, 0, 0));
         jLabel98.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel98.setText("DESCRIPCION COBERTURAS");
         jLabel98.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -1834,7 +1834,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         jLabel89.setBackground(new java.awt.Color(0, 0, 51));
         jLabel89.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        jLabel89.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel89.setForeground(new java.awt.Color(0, 0, 0));
         jLabel89.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel89.setText("DESCRIPCION COBERTURAS");
         jLabel89.setBorder(javax.swing.BorderFactory.createTitledBorder(""));

@@ -471,7 +471,7 @@ public class COBROS extends javax.swing.JInternalFrame {
        modelo1.addColumn("Estado");
     
 
-       String sql ="SELECT * FROM tbl_cobros_vhl WHERE IdPolizaVhl_cbrvhl="+nopol+"";
+       String sql ="SELECT * FROM tbl_cobros_vhl WHERE NoPoliza_cbr="+nopol+"";
        String datos[] = new String[8];
        Statement st;
         try {
@@ -642,6 +642,17 @@ DefaultTableModel modelo1 = new DefaultTableModel();
     private void initComponents() {
 
         COBRO = new javax.swing.JTabbedPane();
+        MENU1 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        VehiculosMenuBtn = new javax.swing.JButton();
+        GastosMedMenuBtn = new javax.swing.JButton();
+        EquiposMenuBtn = new javax.swing.JButton();
+        SegVidaBtn = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         MENU2 = new javax.swing.JPanel();
         jPanel25 = new javax.swing.JPanel();
         IngresosMenu2Btn = new javax.swing.JButton();
@@ -726,17 +737,6 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         TBL_CBR = new javax.swing.JTable();
         CGM2AtrasBtn4 = new javax.swing.JButton();
         CGM2AtrasBtn5 = new javax.swing.JButton();
-        MENU1 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        VehiculosMenuBtn = new javax.swing.JButton();
-        GastosMedMenuBtn = new javax.swing.JButton();
-        EquiposMenuBtn = new javax.swing.JButton();
-        SegVidaBtn = new javax.swing.JButton();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        jLabel80 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
@@ -762,6 +762,163 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         });
 
         COBRO.setBackground(new java.awt.Color(51, 51, 51));
+
+        MENU1.setBackground(new java.awt.Color(102, 102, 102));
+
+        jPanel7.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel7.setOpaque(false);
+
+        VehiculosMenuBtn.setBackground(new java.awt.Color(0, 0, 0));
+        VehiculosMenuBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        VehiculosMenuBtn.setForeground(new java.awt.Color(255, 255, 255));
+        VehiculosMenuBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/coche (1).png"))); // NOI18N
+        VehiculosMenuBtn.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        VehiculosMenuBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VehiculosMenuBtnActionPerformed(evt);
+            }
+        });
+
+        GastosMedMenuBtn.setBackground(new java.awt.Color(0, 0, 0));
+        GastosMedMenuBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        GastosMedMenuBtn.setForeground(new java.awt.Color(255, 255, 255));
+        GastosMedMenuBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/botiquin-de-primeros-auxilios (2).png"))); // NOI18N
+        GastosMedMenuBtn.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        GastosMedMenuBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GastosMedMenuBtnActionPerformed(evt);
+            }
+        });
+
+        EquiposMenuBtn.setBackground(new java.awt.Color(0, 0, 0));
+        EquiposMenuBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        EquiposMenuBtn.setForeground(new java.awt.Color(255, 255, 255));
+        EquiposMenuBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/maquinaria.png"))); // NOI18N
+        EquiposMenuBtn.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        EquiposMenuBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EquiposMenuBtnActionPerformed(evt);
+            }
+        });
+
+        SegVidaBtn.setBackground(new java.awt.Color(0, 0, 0));
+        SegVidaBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        SegVidaBtn.setForeground(new java.awt.Color(255, 255, 255));
+        SegVidaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/corazon (3).png"))); // NOI18N
+        SegVidaBtn.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        SegVidaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SegVidaBtnActionPerformed(evt);
+            }
+        });
+
+        jLabel20.setBackground(new java.awt.Color(0, 0, 51));
+        jLabel20.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("VEHICULOS");
+        jLabel20.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        jLabel61.setBackground(new java.awt.Color(0, 0, 51));
+        jLabel61.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
+        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel61.setText("EQUIPOS");
+        jLabel61.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        jLabel64.setBackground(new java.awt.Color(0, 0, 51));
+        jLabel64.setFont(new java.awt.Font("Segoe UI Historic", 1, 26)); // NOI18N
+        jLabel64.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel64.setText("GASTOS MEDICOS");
+        jLabel64.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        jLabel80.setBackground(new java.awt.Color(0, 0, 51));
+        jLabel80.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
+        jLabel80.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel80.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel80.setText("SEG. DE VIDA");
+        jLabel80.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EquiposMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(VehiculosMenuBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 189, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel64, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(GastosMedMenuBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel80, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SegVidaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(100, 100, 100))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(GastosMedMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(175, 175, 175))
+                            .addComponent(SegVidaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(VehiculosMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(43, 43, 43)
+                        .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(EquiposMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+
+        jLabel12.setBackground(new java.awt.Color(0, 0, 51));
+        jLabel12.setFont(new java.awt.Font("Segoe UI Historic", 1, 40)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Menú");
+        jLabel12.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        javax.swing.GroupLayout MENU1Layout = new javax.swing.GroupLayout(MENU1);
+        MENU1.setLayout(MENU1Layout);
+        MENU1Layout.setHorizontalGroup(
+            MENU1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MENU1Layout.createSequentialGroup()
+                .addGap(310, 310, 310)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1047, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MENU1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(204, 204, 204))
+        );
+        MENU1Layout.setVerticalGroup(
+            MENU1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MENU1Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(88, Short.MAX_VALUE))
+        );
+
+        COBRO.addTab("MENU", MENU1);
 
         MENU2.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -1865,163 +2022,6 @@ DefaultTableModel modelo1 = new DefaultTableModel();
 
         COBRO.addTab("C. COBROS", C_GM3);
 
-        MENU1.setBackground(new java.awt.Color(102, 102, 102));
-
-        jPanel7.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jPanel7.setOpaque(false);
-
-        VehiculosMenuBtn.setBackground(new java.awt.Color(0, 0, 0));
-        VehiculosMenuBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        VehiculosMenuBtn.setForeground(new java.awt.Color(255, 255, 255));
-        VehiculosMenuBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/coche (1).png"))); // NOI18N
-        VehiculosMenuBtn.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        VehiculosMenuBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VehiculosMenuBtnActionPerformed(evt);
-            }
-        });
-
-        GastosMedMenuBtn.setBackground(new java.awt.Color(0, 0, 0));
-        GastosMedMenuBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        GastosMedMenuBtn.setForeground(new java.awt.Color(255, 255, 255));
-        GastosMedMenuBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/botiquin-de-primeros-auxilios (2).png"))); // NOI18N
-        GastosMedMenuBtn.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        GastosMedMenuBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GastosMedMenuBtnActionPerformed(evt);
-            }
-        });
-
-        EquiposMenuBtn.setBackground(new java.awt.Color(0, 0, 0));
-        EquiposMenuBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        EquiposMenuBtn.setForeground(new java.awt.Color(255, 255, 255));
-        EquiposMenuBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/maquinaria.png"))); // NOI18N
-        EquiposMenuBtn.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        EquiposMenuBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EquiposMenuBtnActionPerformed(evt);
-            }
-        });
-
-        SegVidaBtn.setBackground(new java.awt.Color(0, 0, 0));
-        SegVidaBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        SegVidaBtn.setForeground(new java.awt.Color(255, 255, 255));
-        SegVidaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/corazon (3).png"))); // NOI18N
-        SegVidaBtn.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        SegVidaBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SegVidaBtnActionPerformed(evt);
-            }
-        });
-
-        jLabel20.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel20.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("VEHICULOS");
-        jLabel20.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        jLabel61.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel61.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
-        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel61.setText("EQUIPOS");
-        jLabel61.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        jLabel64.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel64.setFont(new java.awt.Font("Segoe UI Historic", 1, 26)); // NOI18N
-        jLabel64.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel64.setText("GASTOS MEDICOS");
-        jLabel64.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        jLabel80.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel80.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
-        jLabel80.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel80.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel80.setText("SEG. DE VIDA");
-        jLabel80.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EquiposMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(VehiculosMenuBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 189, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel64, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(GastosMedMenuBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel80, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(SegVidaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(100, 100, 100))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(GastosMedMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(175, 175, 175))
-                            .addComponent(SegVidaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)
-                        .addComponent(VehiculosMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)
-                        .addComponent(EquiposMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
-
-        jLabel12.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel12.setFont(new java.awt.Font("Segoe UI Historic", 1, 40)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("Menú");
-        jLabel12.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        javax.swing.GroupLayout MENU1Layout = new javax.swing.GroupLayout(MENU1);
-        MENU1.setLayout(MENU1Layout);
-        MENU1Layout.setHorizontalGroup(
-            MENU1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MENU1Layout.createSequentialGroup()
-                .addGap(310, 310, 310)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1047, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MENU1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(204, 204, 204))
-        );
-        MENU1Layout.setVerticalGroup(
-            MENU1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MENU1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(88, Short.MAX_VALUE))
-        );
-
-        COBRO.addTab("MENU", MENU1);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -2187,9 +2187,10 @@ switch(menu)
           mostrar_tabla2();
           i++;
         IVNoPIngresadoTxt.setText(""+ i);
+                System.out.println(TblCV2.getValueAt(7, 1).toString()+" "+ TblCV2.getValueAt(2, 1).toString()+" "+TblCV2.getValueAt(1, 1).toString());
         Ingresos     cobros =new Ingresos();
         cobros.ingresoCobrosV(i,TblCV2.getValueAt(7, 1).toString(),TblCV2.getValueAt(2, 1).toString(),TblCV2.getValueAt(1, 1).toString());
-             break;
+        break;
             case 2:
                 mostrar_tabla3();
             i++;
@@ -2512,8 +2513,8 @@ switch(menu)
                 int filavhl  = TBL_CBR.getSelectedRow();
         String NoPol;
         
-            NoPol = valueOf(TBL_CBR.getValueAt(filavhl, 1));
-           cv4(NoPol);
+          NoPol = valueOf(TblCV2.getValueAt(2, 1));
+       cv4(NoPol);
             COBRO.setSelectedIndex(8);break;
        
             

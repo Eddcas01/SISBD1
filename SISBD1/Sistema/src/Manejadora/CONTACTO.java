@@ -53,6 +53,7 @@ public class CONTACTO extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTabbedPane1 = new javax.swing.JTabbedPane();
         panel_ingreso_cts13 = new javax.swing.JPanel();
         jLabel90 = new javax.swing.JLabel();
         jPanel43 = new javax.swing.JPanel();
@@ -63,7 +64,6 @@ public class CONTACTO extends javax.swing.JInternalFrame {
         jLabel176 = new javax.swing.JLabel();
         jScrollPane19 = new javax.swing.JScrollPane();
         TEL_CTO = new javax.swing.JTextArea();
-        IGM2AtrasBtn3 = new javax.swing.JButton();
         IGM2IngresarPagTxt8 = new javax.swing.JButton();
         IGM2IngresarPagTxt9 = new javax.swing.JButton();
         IGM2IngresarPagTxt10 = new javax.swing.JButton();
@@ -106,7 +106,7 @@ public class CONTACTO extends javax.swing.JInternalFrame {
         jLabel90.setFont(new java.awt.Font("Segoe UI Historic", 1, 36)); // NOI18N
         jLabel90.setForeground(new java.awt.Color(255, 255, 255));
         jLabel90.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel90.setText("CONTACTO");
+        jLabel90.setText("CONTACTOS");
         jLabel90.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel43.setBackground(new java.awt.Color(0, 0, 51));
@@ -187,16 +187,6 @@ public class CONTACTO extends javax.swing.JInternalFrame {
                     .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE))
                 .addContainerGap())
         );
-
-        IGM2AtrasBtn3.setBackground(new java.awt.Color(0, 0, 0));
-        IGM2AtrasBtn3.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        IGM2AtrasBtn3.setForeground(new java.awt.Color(255, 255, 255));
-        IGM2AtrasBtn3.setText("ATRAS");
-        IGM2AtrasBtn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IGM2AtrasBtn3ActionPerformed(evt);
-            }
-        });
 
         IGM2IngresarPagTxt8.setBackground(new java.awt.Color(0, 0, 0));
         IGM2IngresarPagTxt8.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
@@ -296,38 +286,35 @@ public class CONTACTO extends javax.swing.JInternalFrame {
                 .addGap(44, 44, 44)
                 .addGroup(panel_ingreso_cts13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panel_ingreso_cts13Layout.createSequentialGroup()
-                        .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(134, 134, 134))
-                    .addGroup(panel_ingreso_cts13Layout.createSequentialGroup()
                         .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panel_ingreso_cts13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(IGM2IngresarPagTxt13, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(IGM2IngresarPagTxt10, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panel_ingreso_cts13Layout.createSequentialGroup()
-                                .addGroup(panel_ingreso_cts13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(IGM2IngresarPagTxt8, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(IGM2IngresarPagTxt9, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(260, 260, 260)
-                                .addComponent(IGM2AtrasBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(IGM2IngresarPagTxt14, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panel_ingreso_cts13Layout.createSequentialGroup()
+                            .addComponent(IGM2IngresarPagTxt8, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(IGM2IngresarPagTxt9, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(IGM2IngresarPagTxt14, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(363, 363, 363))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_ingreso_cts13Layout.createSequentialGroup()
                         .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 637, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(97, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_ingreso_cts13Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(238, 238, 238))
         );
         panel_ingreso_cts13Layout.setVerticalGroup(
             panel_ingreso_cts13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_ingreso_cts13Layout.createSequentialGroup()
-                .addGap(55, 55, 55)
+                .addContainerGap()
                 .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
+                .addGap(18, 18, 18)
                 .addGroup(panel_ingreso_cts13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panel_ingreso_cts13Layout.createSequentialGroup()
-                        .addGroup(panel_ingreso_cts13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(IGM2AtrasBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(IGM2IngresarPagTxt9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(IGM2IngresarPagTxt9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(IGM2IngresarPagTxt8, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
@@ -335,24 +322,25 @@ public class CONTACTO extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(IGM2IngresarPagTxt13, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(IGM2IngresarPagTxt14, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(IGM2IngresarPagTxt14, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(panel_ingreso_cts13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane20, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE))
-                .addContainerGap(61, Short.MAX_VALUE))
+                    .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
+
+        jTabbedPane1.addTab("ASEGURADORAS", panel_ingreso_cts13);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_ingreso_cts13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1149, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_ingreso_cts13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 791, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -440,14 +428,9 @@ public class CONTACTO extends javax.swing.JInternalFrame {
          this.setSize(200, 40);
     }//GEN-LAST:event_formInternalFrameIconified
 
-    private void IGM2AtrasBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IGM2AtrasBtn3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_IGM2AtrasBtn3ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JTextField CARGO_CTO;
-    private javax.swing.JButton IGM2AtrasBtn3;
     private javax.swing.JButton IGM2IngresarPagTxt10;
     private javax.swing.JButton IGM2IngresarPagTxt13;
     private javax.swing.JButton IGM2IngresarPagTxt14;
@@ -465,6 +448,7 @@ public class CONTACTO extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane17;
     private javax.swing.JScrollPane jScrollPane19;
     private javax.swing.JScrollPane jScrollPane20;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel panel_ingreso_cts13;
     // End of variables declaration//GEN-END:variables
 }
