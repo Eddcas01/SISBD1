@@ -437,14 +437,14 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
         jLabel76.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
         jLabel76.setForeground(new java.awt.Color(255, 255, 255));
         jLabel76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel76.setText("ELIMINACION");
+        jLabel76.setText("ELIMINAR");
         jLabel76.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel77.setBackground(new java.awt.Color(0, 0, 51));
         jLabel77.setFont(new java.awt.Font("Segoe UI Historic", 1, 31)); // NOI18N
         jLabel77.setForeground(new java.awt.Color(255, 255, 255));
         jLabel77.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel77.setText("MODIFICACION");
+        jLabel77.setText("MODIFICAR");
         jLabel77.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel78.setBackground(new java.awt.Color(0, 0, 51));
@@ -1218,11 +1218,10 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
                                     .addComponent(CGMBuscarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(C_GM1Layout.createSequentialGroup()
-                                        .addComponent(COMBO_EE, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(594, 594, 594))
-                                    .addComponent(CGMLimpiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                                    .addComponent(COMBO_EE, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(CGMLimpiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(594, 594, 594)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(CGM2VolverBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(270, 270, 270))))
         );
@@ -1290,7 +1289,7 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
         CV2CoberturasyCobBtn1.setBackground(new java.awt.Color(0, 0, 0));
         CV2CoberturasyCobBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         CV2CoberturasyCobBtn1.setForeground(new java.awt.Color(255, 255, 255));
-        CV2CoberturasyCobBtn1.setText("VER COBROS Y ASEGURADOS");
+        CV2CoberturasyCobBtn1.setText("VER COBROS ");
         CV2CoberturasyCobBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CV2CoberturasyCobBtn1ActionPerformed(evt);
@@ -1508,9 +1507,10 @@ public class EQUIPO_E extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(EQUIPO, javax.swing.GroupLayout.PREFERRED_SIZE, 1532, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(EQUIPO, javax.swing.GroupLayout.PREFERRED_SIZE, 1532, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

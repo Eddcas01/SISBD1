@@ -578,14 +578,14 @@ public void mostrar_tabla4_vd(){
         jLabel76.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
         jLabel76.setForeground(new java.awt.Color(255, 255, 255));
         jLabel76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel76.setText("ELIMINACION");
+        jLabel76.setText("ELIMINAR");
         jLabel76.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel77.setBackground(new java.awt.Color(0, 0, 51));
         jLabel77.setFont(new java.awt.Font("Segoe UI Historic", 1, 31)); // NOI18N
         jLabel77.setForeground(new java.awt.Color(255, 255, 255));
         jLabel77.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel77.setText("MODIFICACION");
+        jLabel77.setText("MODIFICAR");
         jLabel77.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel78.setBackground(new java.awt.Color(0, 0, 51));

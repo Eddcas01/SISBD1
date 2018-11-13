@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1a7ad2e5-b1aa-4313-b9c5-fe8ba0b29631">
-	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="493"/>
+	<property name="ireport.y" value="9"/>
 	<queryString language="SQL">
 		<![CDATA[SELECT
      tbl_vehiculos.`IdAseguradora_vhl` AS tbl_vehiculos_IdAseguradora_vhl,
@@ -78,16 +78,16 @@ FROM
 				<staticText>
 					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="0e5eb73d-d73e-42df-82ca-035174bd2ee3"/>
 					<textElement>
-						<font size="34" isBold="true"/>
+						<font size="34" isBold="true" isItalic="true"/>
 					</textElement>
 					<text><![CDATA[Vehiculos]]></text>
 				</staticText>
 				<staticText>
 					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="d689f7e1-7eae-4102-8e32-641b7cf9b934"/>
 					<textElement textAlignment="Right">
-						<font size="14" isBold="false"/>
+						<font size="14" isBold="true"/>
 					</textElement>
-					<text><![CDATA[Reporte]]></text>
+					<text><![CDATA[AYASEG]]></text>
 				</staticText>
 			</frame>
 		</band>
@@ -101,214 +101,102 @@ FROM
 				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="a2574831-3502-415a-b072-89a333c04be8"/>
 			</line>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="9a9a138c-2733-4f43-866a-4343c61ff651"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[IdAseguradora]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="18" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="64e26834-3eff-499b-9350-73a0cc9f28a2"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[IdPoliza]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="36" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b537ba0e-e9f7-4b23-aa00-540221ad307a"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
+				<reportElement mode="Opaque" x="0" y="0" width="20" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b537ba0e-e9f7-4b23-aa00-540221ad307a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
 				</textElement>
 				<text><![CDATA[NoPoliza]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="54" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3590d3af-493c-432e-92ad-2da008b25e9c"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
+				<reportElement mode="Opaque" x="20" y="0" width="29" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3590d3af-493c-432e-92ad-2da008b25e9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
 				</textElement>
 				<text><![CDATA[NoCertificado]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="72" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="df7c490c-5fe5-43e4-9293-cf57fbbe35c7"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
+				<reportElement mode="Opaque" x="49" y="1" width="74" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="df7c490c-5fe5-43e4-9293-cf57fbbe35c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Vigencia Inicio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="90" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4842b8aa-c8c6-4ed5-a81a-7a4d6c8395ed"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Vigecia Fin]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="108" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="145c207d-e90f-4515-83a6-f531636427c6"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Contratante]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="126" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="e59a2316-c252-45d9-a4f3-fab50e6c742d"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[IdCliente]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="144" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="db93dd80-19f9-4cdf-854e-1ed214dad2b4"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Asegurado]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="162" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="2a0e13f3-76dc-40a7-9edf-8498e5bb65d8"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Direccion]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="180" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="51b66747-6876-4934-9839-93eb13520cc6"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Nit]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="198" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="e4b08695-2ad1-4135-be94-b9503e355606"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
+				<reportElement mode="Opaque" x="123" y="0" width="48" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="e4b08695-2ad1-4135-be94-b9503e355606"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Marca]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="216" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="32cd7765-6458-4642-9808-030b20dc4a00"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
+				<reportElement mode="Opaque" x="171" y="0" width="39" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="32cd7765-6458-4642-9808-030b20dc4a00"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Linea]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="234" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="e3842f85-ca31-453b-9fd5-bc8b1aba6fb3"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Modelo]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="252" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="987a5350-9ce7-4b51-bd9c-05dca2229a2a"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Placa]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="270" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="20c2cca6-1831-4305-8f46-6ee05ee15e4e"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Color]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="288" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="807ed60a-8e50-4d04-97be-2e7cc79ac415"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[NoChasis]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="306" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="2d0d380b-ed81-47a6-81bd-e2943713cee9"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[NoMotor]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="324" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="438f1586-64c9-4ee7-ac6f-dd385632cfd2"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Pasajeros]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="342" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="bc4d29bd-d078-4c6c-916d-4a183575cf03"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Tipo]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="360" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="aca083ad-f1a8-4437-a83c-2b7b3a2a1d4d"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
+				<reportElement mode="Opaque" x="470" y="0" width="19" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="aca083ad-f1a8-4437-a83c-2b7b3a2a1d4d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Cobertura]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="378" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="469fa1dc-6973-4a18-8e41-100794333525"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Descripcion Cobertura]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="396" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="44f12083-f04b-46c4-a33a-1a5569890916"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Suma Vehiculo]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="414" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="75f1fbd3-f399-4c0c-9a99-7dd81291f241"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Suma RC]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="432" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="00c991b3-2fe9-404d-b23a-ef32a24171b0"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Deducible Caños Propios]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="450" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="bd954cc5-1c28-4a21-b0ad-b9dbdba68668"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Deducible Robo]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="468" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="1cb95544-ec72-4cd6-96f2-90d93f598d2d"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Conductores Menor]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="486" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a8e8e5ed-f559-4b33-bda4-450a2f5aac4e"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Conductores Mayores]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="504" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="003d1f91-1e37-4764-9521-b76e86faa209"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
+				<reportElement mode="Opaque" x="489" y="0" width="33" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="003d1f91-1e37-4764-9521-b76e86faa209"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Tarifa]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="522" y="0" width="18" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="11fdc637-1eb7-443b-90c2-6176cd40ba60"/>
-				<textElement textAlignment="Center">
-					<font size="3" isBold="true"/>
+				<reportElement mode="Opaque" x="522" y="0" width="33" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="11fdc637-1eb7-443b-90c2-6176cd40ba60"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Estado Poliza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="210" y="0" width="28" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="e3842f85-ca31-453b-9fd5-bc8b1aba6fb3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Modelo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="238" y="0" width="36" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="987a5350-9ce7-4b51-bd9c-05dca2229a2a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Placa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="274" y="0" width="43" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="20c2cca6-1831-4305-8f46-6ee05ee15e4e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Color]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="379" y="0" width="57" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="2d0d380b-ed81-47a6-81bd-e2943713cee9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NoMotor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="437" y="0" width="33" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="bc4d29bd-d078-4c6c-916d-4a183575cf03"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="317" y="0" width="62" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="807ed60a-8e50-4d04-97be-2e7cc79ac415"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NoChasis]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
@@ -318,214 +206,109 @@ FROM
 				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="c85dcb42-2356-4365-bd07-78ce9f77cc15"/>
 			</line>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="0" y="0" width="18" height="20" uuid="054315e7-c60d-4b28-adee-fe8d6aaba16e"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_IdAseguradora_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="18" y="0" width="18" height="20" uuid="c0cbe945-cc58-4229-97eb-be04ef533820"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_IdPolizaVhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="36" y="0" width="18" height="20" uuid="85351af6-8262-4120-ab8b-d1657784ad29"/>
-				<textElement>
-					<font size="3"/>
+				<reportElement x="0" y="0" width="20" height="20" uuid="85351af6-8262-4120-ab8b-d1657784ad29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vehiculos_NoPoliza_vhl}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="54" y="0" width="18" height="20" uuid="945f64d0-4bb4-4d4c-823d-f42fbfeefec4"/>
-				<textElement>
-					<font size="3"/>
+				<reportElement x="20" y="0" width="29" height="20" uuid="945f64d0-4bb4-4d4c-823d-f42fbfeefec4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vehiculos_NoCertificado_vhl}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="72" y="0" width="18" height="20" uuid="93e8ba7f-ec5a-4137-8bb6-6a3c004a7c35"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_VigenciaInicio_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="90" y="0" width="18" height="20" uuid="83aa80a8-7321-413b-89f1-b64dcb6cf281"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_VigeciaFin_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="108" y="0" width="18" height="20" uuid="17d0778a-5a32-4a1f-ba70-0061021f917e"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Contratante_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="126" y="0" width="18" height="20" uuid="b8623e68-493a-43e1-8d4a-7100af5b6117"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_IdCliente_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="144" y="0" width="18" height="20" uuid="02dd40a5-4a98-4c34-866f-e18122d80acf"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Asegurado_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="162" y="0" width="18" height="20" uuid="d624ca0e-31f0-4dd0-afe0-b9e3bfd22f44"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Direccion_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="180" y="0" width="18" height="20" uuid="145359c3-09b7-428a-a3ca-f4d773dd7268"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Nit_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="198" y="0" width="18" height="20" uuid="aff6db94-034d-4be9-83de-9fa685464f17"/>
-				<textElement>
-					<font size="3"/>
+				<reportElement x="123" y="0" width="48" height="20" uuid="aff6db94-034d-4be9-83de-9fa685464f17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Marca_vhl}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="216" y="0" width="18" height="20" uuid="7195f4eb-8b29-4508-b94a-f2e01987d3b2"/>
-				<textElement>
-					<font size="3"/>
+				<reportElement x="171" y="0" width="39" height="20" uuid="7195f4eb-8b29-4508-b94a-f2e01987d3b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Linea_vhl}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="234" y="0" width="18" height="20" uuid="c56a799e-812f-44bd-91cf-aa2d48d97e43"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Modelo_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="252" y="0" width="18" height="20" uuid="c6a3692d-ebca-499a-a4bf-00ef815a190d"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Placa_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="270" y="0" width="18" height="20" uuid="3b856a56-0889-4a23-a907-aeac4e402087"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Color_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="288" y="0" width="18" height="20" uuid="8f2c2635-8d91-42a2-b553-06aaa36afe66"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_NoChasis_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="306" y="0" width="18" height="20" uuid="af3187f2-1cf0-4998-849e-21493e07d434"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_NoMotor_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="324" y="0" width="18" height="20" uuid="7debd38e-db07-4d7f-9e41-f2fddf435dc6"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Pasajeros_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="342" y="0" width="18" height="20" uuid="f288e241-3525-415b-9505-77d20e8c89a3"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Tipo_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="360" y="0" width="18" height="20" uuid="5c8eb7c3-dc9d-414c-afca-35b3a788211c"/>
-				<textElement>
-					<font size="3"/>
+				<reportElement x="470" y="0" width="19" height="20" uuid="5c8eb7c3-dc9d-414c-afca-35b3a788211c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Cobertura_vhl}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="378" y="0" width="18" height="20" uuid="596bea16-3d2c-44ad-a222-35cdccd00698"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_DescripcionCobertura_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="396" y="0" width="18" height="20" uuid="e0ec3381-0031-46eb-8425-d3b5c38e7107"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_SumaVehiculo_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="414" y="0" width="18" height="20" uuid="40a76e0a-3db6-4b0e-9daa-4741de987706"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_SumaRC_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="432" y="0" width="18" height="20" uuid="f82dee02-ba86-4f16-bf1a-86761c81824a"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_DeducibleCañosPropios_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="450" y="0" width="18" height="20" uuid="4226e933-fac2-4448-9c2f-3839f910849e"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_DeducibleRobo_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="468" y="0" width="18" height="20" uuid="6d3a759f-7294-44b2-954b-8c3e96190018"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_ConductoresMenores_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="486" y="0" width="18" height="20" uuid="202bb653-7fe8-4d25-bd66-809f945612e8"/>
-				<textElement>
-					<font size="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vehiculos_ConductoresMayores_vhl}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="504" y="0" width="18" height="20" uuid="7ec77987-3a71-4ef3-a4cf-deab64132390"/>
-				<textElement>
-					<font size="3"/>
+				<reportElement x="489" y="0" width="33" height="20" uuid="7ec77987-3a71-4ef3-a4cf-deab64132390"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Tarifa_vhl}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="522" y="0" width="18" height="20" uuid="106af302-74bf-4e1c-b9e6-926329ecdeef"/>
-				<textElement>
-					<font size="3"/>
+				<reportElement x="522" y="0" width="33" height="20" uuid="106af302-74bf-4e1c-b9e6-926329ecdeef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vehiculos_EstadoPoliza_vhl}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="210" y="0" width="28" height="20" uuid="c56a799e-812f-44bd-91cf-aa2d48d97e43"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Modelo_vhl}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="238" y="0" width="36" height="20" uuid="c6a3692d-ebca-499a-a4bf-00ef815a190d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Placa_vhl}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="274" y="0" width="43" height="20" uuid="3b856a56-0889-4a23-a907-aeac4e402087"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Color_vhl}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="379" y="0" width="57" height="20" uuid="af3187f2-1cf0-4998-849e-21493e07d434"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vehiculos_NoMotor_vhl}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="437" y="0" width="33" height="20" uuid="f288e241-3525-415b-9505-77d20e8c89a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vehiculos_Tipo_vhl}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="317" y="0" width="62" height="20" uuid="8f2c2635-8d91-42a2-b553-06aaa36afe66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vehiculos_NoChasis_vhl}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="89" y="0" width="31" height="20" uuid="83aa80a8-7321-413b-89f1-b64dcb6cf281"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vehiculos_VigeciaFin_vhl}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="52" y="0" width="31" height="20" uuid="93e8ba7f-ec5a-4137-8bb6-6a3c004a7c35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_vehiculos_VigenciaInicio_vhl}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

@@ -312,7 +312,6 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
         jScrollPane8 = new javax.swing.JScrollPane();
         IIGM1DescTxt = new javax.swing.JTextArea();
         limpiar9 = new javax.swing.JButton();
-        IGMSalirBtn = new javax.swing.JButton();
         IGMvolverBtn = new javax.swing.JButton();
         IGMAtrasBtn = new javax.swing.JButton();
         I_GM2 = new javax.swing.JPanel();
@@ -342,7 +341,6 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
         CGMBusquedaTxt = new javax.swing.JTextField();
         CGMLimpiarBtn = new javax.swing.JButton();
         CGMBuscarbtn = new javax.swing.JButton();
-        CGMSalirbtn = new javax.swing.JButton();
         jScrollPane12 = new javax.swing.JScrollPane();
         TblGM1 = new javax.swing.JTable();
         CGM2VolverBtn2 = new javax.swing.JButton();
@@ -350,7 +348,6 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
         jLabel68 = new javax.swing.JLabel();
         CGM2VolverBtn = new javax.swing.JButton();
         CGM2AtrasBtn = new javax.swing.JButton();
-        CGMSalirBtn = new javax.swing.JButton();
         jLabel69 = new javax.swing.JLabel();
         CV2CoberturasyCobBtn1 = new javax.swing.JButton();
         jScrollPane9 = new javax.swing.JScrollPane();
@@ -364,7 +361,6 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
         jLabel81 = new javax.swing.JLabel();
         CGM2VolverBtn1 = new javax.swing.JButton();
         CGM2AtrasBtn1 = new javax.swing.JButton();
-        CGMSalirBtn1 = new javax.swing.JButton();
         jLabel82 = new javax.swing.JLabel();
         jLabel85 = new javax.swing.JLabel();
         jScrollPane10 = new javax.swing.JScrollPane();
@@ -459,14 +455,14 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
         jLabel76.setFont(new java.awt.Font("Segoe UI Historic", 1, 32)); // NOI18N
         jLabel76.setForeground(new java.awt.Color(255, 255, 255));
         jLabel76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel76.setText("ELIMINACION");
+        jLabel76.setText("ELIMINAR");
         jLabel76.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel77.setBackground(new java.awt.Color(0, 0, 51));
         jLabel77.setFont(new java.awt.Font("Segoe UI Historic", 1, 28)); // NOI18N
         jLabel77.setForeground(new java.awt.Color(255, 255, 255));
         jLabel77.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel77.setText("MODIFICACION");
+        jLabel77.setText("MODIFICAR");
         jLabel77.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel78.setBackground(new java.awt.Color(0, 0, 51));
@@ -1111,16 +1107,6 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18))
         );
 
-        IGMSalirBtn.setBackground(new java.awt.Color(51, 0, 0));
-        IGMSalirBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        IGMSalirBtn.setForeground(new java.awt.Color(255, 255, 255));
-        IGMSalirBtn.setText("SALIR");
-        IGMSalirBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IGMSalirBtnActionPerformed(evt);
-            }
-        });
-
         IGMvolverBtn.setBackground(new java.awt.Color(0, 0, 0));
         IGMvolverBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         IGMvolverBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -1151,14 +1137,13 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
                         .addGap(107, 107, 107)
                         .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(I_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(IGMSalirBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(I_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(IGMvolverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(IGMAtrasBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(I_GM1Layout.createSequentialGroup()
                         .addGap(388, 388, 388)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(300, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         I_GM1Layout.setVerticalGroup(
             I_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1170,11 +1155,9 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
                     .addGroup(I_GM1Layout.createSequentialGroup()
                         .addComponent(IGMvolverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(IGMAtrasBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(88, 88, 88)
-                        .addComponent(IGMSalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(IGMAtrasBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         GM.addTab("I GASTOS MEDICOS", I_GM1);
@@ -1453,16 +1436,6 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
             }
         });
 
-        CGMSalirbtn.setBackground(new java.awt.Color(51, 0, 0));
-        CGMSalirbtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CGMSalirbtn.setForeground(new java.awt.Color(255, 255, 255));
-        CGMSalirbtn.setText("SALIR");
-        CGMSalirbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CGMSalirbtnActionPerformed(evt);
-            }
-        });
-
         TblGM1.setBackground(new java.awt.Color(0, 0, 51));
         TblGM1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         TblGM1.setForeground(new java.awt.Color(255, 255, 255));
@@ -1519,9 +1492,7 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
                             .addComponent(CGMBusquedaCbx, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(CGMLimpiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(C_GM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CGMSalirbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CGM2VolverBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(CGM2VolverBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(C_GM1Layout.createSequentialGroup()
                 .addGap(453, 453, 453)
@@ -1545,9 +1516,7 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
                             .addComponent(CGMBuscarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(C_GM1Layout.createSequentialGroup()
                         .addGap(4, 4, 4)
-                        .addComponent(CGM2VolverBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CGMSalirbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(CGM2VolverBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(48, 48, 48)
                 .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
                 .addContainerGap(116, Short.MAX_VALUE))
@@ -1581,16 +1550,6 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
         CGM2AtrasBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CGM2AtrasBtnActionPerformed(evt);
-            }
-        });
-
-        CGMSalirBtn.setBackground(new java.awt.Color(51, 0, 0));
-        CGMSalirBtn.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CGMSalirBtn.setForeground(new java.awt.Color(255, 255, 255));
-        CGMSalirBtn.setText("SALIR");
-        CGMSalirBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CGMSalirBtnActionPerformed(evt);
             }
         });
 
@@ -1689,11 +1648,9 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
                     .addGroup(C_GM2Layout.createSequentialGroup()
                         .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(C_GM2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CGMSalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(C_GM2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(CGM2AtrasBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CGM2VolverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(C_GM2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CGM2AtrasBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CGM2VolverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(412, 412, 412))
         );
         C_GM2Layout.setVerticalGroup(
@@ -1704,9 +1661,7 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
                         .addGap(106, 106, 106)
                         .addComponent(CGM2VolverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(CGM2AtrasBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(93, 93, 93)
-                        .addComponent(CGMSalirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(CGM2AtrasBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(C_GM2Layout.createSequentialGroup()
                         .addGap(59, 59, 59)
                         .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1728,7 +1683,7 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
                                 .addComponent(CGMElimBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         GM.addTab("C GASTOS MEDICOS 2", C_GM2);
@@ -1759,16 +1714,6 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
         CGM2AtrasBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CGM2AtrasBtn1ActionPerformed(evt);
-            }
-        });
-
-        CGMSalirBtn1.setBackground(new java.awt.Color(51, 0, 0));
-        CGMSalirBtn1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
-        CGMSalirBtn1.setForeground(new java.awt.Color(255, 255, 255));
-        CGMSalirBtn1.setText("SALIR");
-        CGMSalirBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CGMSalirBtn1ActionPerformed(evt);
             }
         });
 
@@ -1857,11 +1802,9 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
                             .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 857, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                        .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CGMSalirBtn1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(CGM2AtrasBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(CGM2VolverBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)))
+                        .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(CGM2AtrasBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CGM2VolverBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE))
                         .addGap(174, 174, 174))
                     .addGroup(C_GM3Layout.createSequentialGroup()
                         .addGroup(C_GM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1889,9 +1832,7 @@ public class GASTOS_MEDICOS extends javax.swing.JInternalFrame {
                         .addComponent(CGM2VolverBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(CGM2AtrasBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(CGMSalirBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(101, 101, 101)))
+                        .addGap(164, 164, 164)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2002,10 +1943,6 @@ if(IGMAseguradoraTxt.getText().equals("") || IGMNoPolizaTxt.getText().equals("")
         } }
     }//GEN-LAST:event_limpiar9ActionPerformed
 
-    private void IGMSalirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IGMSalirBtnActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_IGMSalirBtnActionPerformed
-
     private void IGMvolverBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IGMvolverBtnActionPerformed
         GM.setSelectedIndex(0);
     }//GEN-LAST:event_IGMvolverBtnActionPerformed
@@ -2095,10 +2032,6 @@ if(IGMAseguradoraTxt.getText().equals("") || IGMNoPolizaTxt.getText().equals("")
         src.Buscar3(src.Campo4(CGMBusquedaCbx.getSelectedItem().toString()),CGMBusquedaTxt.getText());
     }//GEN-LAST:event_CGMBuscarbtnActionPerformed
 
-    private void CGMSalirbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGMSalirbtnActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CGMSalirbtnActionPerformed
-
     private void TblGM1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TblGM1MouseClicked
         int fila  = TblGM1.getSelectedRow(); String Id;
         if (fila>=0){
@@ -2117,10 +2050,6 @@ if(IGMAseguradoraTxt.getText().equals("") || IGMNoPolizaTxt.getText().equals("")
     private void CGM2AtrasBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2AtrasBtnActionPerformed
         GM.setSelectedIndex(5);
     }//GEN-LAST:event_CGM2AtrasBtnActionPerformed
-
-    private void CGMSalirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGMSalirBtnActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_CGMSalirBtnActionPerformed
 
     private void CV2CoberturasyCobBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV2CoberturasyCobBtn1ActionPerformed
         int fila  = TblGM1.getSelectedRow();
@@ -2175,10 +2104,6 @@ if(IGMAseguradoraTxt.getText().equals("") || IGMNoPolizaTxt.getText().equals("")
     private void CGM2AtrasBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGM2AtrasBtn1ActionPerformed
         GM.setSelectedIndex(6);
     }//GEN-LAST:event_CGM2AtrasBtn1ActionPerformed
-
-    private void CGMSalirBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CGMSalirBtn1ActionPerformed
-       System.exit(0);
-    }//GEN-LAST:event_CGMSalirBtn1ActionPerformed
 
     private void formInternalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameDeactivated
                                                
@@ -2235,9 +2160,6 @@ if(IGMAseguradoraTxt.getText().equals("") || IGMNoPolizaTxt.getText().equals("")
     private javax.swing.JButton CGMElimBtn;
     private javax.swing.JButton CGMLimpiarBtn;
     private javax.swing.JButton CGMModBtn;
-    private javax.swing.JButton CGMSalirBtn;
-    private javax.swing.JButton CGMSalirBtn1;
-    private javax.swing.JButton CGMSalirbtn;
     private javax.swing.JButton CV2CoberturasyCobBtn1;
     private javax.swing.JPanel C_CLIENTES1;
     private javax.swing.JPanel C_CLIENTES2;
@@ -2268,7 +2190,6 @@ if(IGMAseguradoraTxt.getText().equals("") || IGMNoPolizaTxt.getText().equals("")
     public static javax.swing.JTextField IGMNoCertificadoTxt;
     public static javax.swing.JTextField IGMNoPolizaTxt;
     public static javax.swing.JTextField IGMNomPlanTxt;
-    private javax.swing.JButton IGMSalirBtn;
     public static javax.swing.JTextField IGMfechaEfecTxt;
     public static javax.swing.JTextField IGMfechaEfecTxt1;
     public static javax.swing.JTextField IGMfechaPTxt1;

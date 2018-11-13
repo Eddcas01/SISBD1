@@ -219,7 +219,7 @@ public class Reportes extends javax.swing.JInternalFrame {
         try {
             conexionBD con = new conexionBD();
             Connection cn = con.conexion();
-            String master = "ReporteSegundoDeVida.jrxml";
+            String master = "ReporteSeguroDeVida.jrxml";
             JasperReport reporte = (JasperReport) JasperCompileManager.compileReport(master);
             JasperPrint print = JasperFillManager.fillReport(reporte, null, cn);
             JasperViewer view = new JasperViewer(print, false);

@@ -1979,7 +1979,7 @@ public class VEHICULOS extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_CV3SalirBtnActionPerformed
 
     private void CVElimBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CVElimBtn1ActionPerformed
-         String sql = "DELETE  FROM tbl_vehiculos WHERE idPolizaVhl ="+valueOf(TblCV2.getValueAt(1, 1))+"";
+         String sql = "DELETE  FROM tbl_vehiculos WHERE NoPoliza_Vhl ="+valueOf(TblCV2.getValueAt(2, 1))+"";
         try {
             PreparedStatement pps = cn.prepareStatement(sql);
             pps.executeUpdate();
@@ -2009,8 +2009,8 @@ public class VEHICULOS extends javax.swing.JInternalFrame {
         IVPasajerosTxt.setText(valueOf(TblCV2.getValueAt(18, 1)));
         IV1ComboBox.setSelectedItem(valueOf(TblCV2.getValueAt(19, 1)));
         IVNoPolizaTxt.setEnabled(false);
-        consulta.cv3(TblCV2.getValueAt(1, 1).toString());
-        consulta.cv4(TblCV2.getValueAt(1, 1).toString());
+        consulta.cv3(TblCV2.getValueAt(2, 1).toString());
+        consulta.cv4(TblCV2.getValueAt(2, 1).toString());
         IV2TipoCoberturaCbx.setSelectedItem(valueOf(TblCV4.getValueAt(8, 1)));
         CM.setSelectedItem(valueOf(TblCV4.getValueAt(4, 1)));
         Cm.setSelectedItem(valueOf(TblCV4.getValueAt(5, 1)));
@@ -2018,8 +2018,8 @@ public class VEHICULOS extends javax.swing.JInternalFrame {
         IV2SumaAVehiculoTxt.setText(valueOf(TblCV4.getValueAt(0, 1)));
         IV2SumaARCTxt.setText(valueOf(TblCV4.getValueAt(1, 1)));
         IV2DeducibleDañoPTxt.setText(valueOf(TblCV4.getValueAt(2, 1)));
-        IV2TarifaTxt.setText(valueOf(TblCV4.getValueAt(3, 1)));
-        IV2DeducibleRoboTxt.setText(valueOf(TblCV4.getValueAt(6, 1)));
+        IV2TarifaTxt.setText(valueOf(TblCV4.getValueAt(6, 1)));
+        IV2DeducibleRoboTxt.setText(valueOf(TblCV4.getValueAt(3, 1)));
         IV2EstadoPloTxt.setText(valueOf(TblCV4.getValueAt(7, 1)));
         IVAceptarBtn.setEnabled(false);
        VEHICULOS.setSelectedIndex(3);
@@ -2114,7 +2114,7 @@ public class VEHICULOS extends javax.swing.JInternalFrame {
         +"Color_vhl='"+IVColorTxt.getText()+"',NoChasis_vhl='"+IVChasisNoTxt.getText()+"',NoMotor_vhl='"+IVMotorNoTxt.getText()+"',Pasajeros_vhl='"+IVPasajerosTxt.getText()+"',Tipo_vhl='"+IV1ComboBox.getSelectedItem().toString()+"',"
         +"Cobertura_vhl='"+IV2TipoCoberturaCbx.getSelectedItem().toString()+"',DescripcionCobertura_vhl='"+IV2Desc.getText()+"',SumaVehiculo_vhl='"+IV2SumaAVehiculoTxt.getText()+"',SumaRC_vhl='"+IV2SumaARCTxt.getText()+"',"
       + "DeducibleCañosPropios_vhl='"+IV2DeducibleDañoPTxt.getText()+"',DeducibleRobo_vhl='"+IV2DeducibleRoboTxt.getText()+"',ConductoresMenores_vhl='"+CM.getSelectedItem().toString()+"',"
-        + "ConductoresMayores_vhl='"+Cm.getSelectedItem().toString()+"',Tarifa_vhl='"+IV2TarifaTxt.getText()+"',EstadoPoliza_vhl='"+IV2EstadoPloTxt.getText()+"' WHERE IdPolizaVhl="+id+"";
+        + "ConductoresMayores_vhl='"+Cm.getSelectedItem().toString()+"',Tarifa_vhl='"+IV2TarifaTxt.getText()+"',EstadoPoliza_vhl='"+IV2EstadoPloTxt.getText()+"' WHERE NoPoliza_Vhl="+id+"";
             
             PreparedStatement pps = cn.prepareStatement(sql);
             pps.executeUpdate();

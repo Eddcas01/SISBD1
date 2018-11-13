@@ -32,16 +32,16 @@ FROM
 				<staticText>
 					<reportElement x="20" y="20" width="316" height="43" forecolor="#FFFFFF" uuid="b4b753b5-1bd0-46e6-8bbd-e011967f9137"/>
 					<textElement>
-						<font size="34" isBold="true"/>
+						<font size="34" isBold="true" isItalic="true"/>
 					</textElement>
 					<text><![CDATA[Seguro De Vida]]></text>
 				</staticText>
 				<staticText>
 					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="1556cb76-4618-419d-ad1a-9d8ce896f518"/>
 					<textElement textAlignment="Right">
-						<font size="14" isBold="false"/>
+						<font size="14" isBold="true"/>
 					</textElement>
-					<text><![CDATA[REPORTE]]></text>
+					<text><![CDATA[AYASEG]]></text>
 				</staticText>
 			</frame>
 		</band>
@@ -62,28 +62,21 @@ FROM
 				<text><![CDATA[ID]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="53" y="0" width="105" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="6bbee5f4-a44c-42d4-89fd-4bff25f35892"/>
-				<textElement textAlignment="Center">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[ID Aseguradora]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="158" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="0177c544-ae33-476b-825f-8070af0f9b61"/>
+				<reportElement mode="Opaque" x="53" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="0177c544-ae33-476b-825f-8070af0f9b61"/>
 				<textElement textAlignment="Center">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[NoPoliza]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="237" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a5fb6a1e-4468-40c0-ba2b-8ca6177273e0"/>
+				<reportElement mode="Opaque" x="132" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a5fb6a1e-4468-40c0-ba2b-8ca6177273e0"/>
 				<textElement textAlignment="Center">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Suma Asegurada_vd]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="316" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b19d2b35-81bb-4d04-bac6-9734fcb84454"/>
+				<reportElement mode="Opaque" x="211" y="0" width="184" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b19d2b35-81bb-4d04-bac6-9734fcb84454"/>
 				<textElement textAlignment="Center">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -103,13 +96,6 @@ FROM
 				</textElement>
 				<text><![CDATA[Fecha Fin]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="76" y="20" width="61" height="20" uuid="d336409c-1c8b-4194-bd4f-8e87ba4bbebb"/>
-				<textElement>
-					<font size="10"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tbl_vida_IdAseguradora_vd}]]></textFieldExpression>
-			</textField>
 		</band>
 	</columnHeader>
 	<detail>
@@ -119,42 +105,42 @@ FROM
 			</line>
 			<textField isStretchWithOverflow="true">
 				<reportElement x="0" y="0" width="53" height="20" uuid="ed6d65b7-dc9b-417c-b9e1-dc16820203b1"/>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vida_idCLiente_vd}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="158" y="0" width="79" height="20" uuid="3fa50f87-4e14-4a68-8d8d-1ec92f79bd62"/>
-				<textElement>
+				<reportElement x="53" y="0" width="79" height="20" uuid="3fa50f87-4e14-4a68-8d8d-1ec92f79bd62"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vida_NoPoliza_vd}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="237" y="0" width="79" height="20" uuid="3a7ad680-185e-4c14-b441-c61dd9ff7fcb"/>
-				<textElement>
+				<reportElement x="132" y="0" width="79" height="20" uuid="3a7ad680-185e-4c14-b441-c61dd9ff7fcb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vida_SumaAsegurada_vd}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="316" y="0" width="79" height="20" uuid="598aecfa-8472-4a33-b3dc-2900425c6468"/>
-				<textElement>
+				<reportElement x="211" y="0" width="184" height="20" uuid="598aecfa-8472-4a33-b3dc-2900425c6468"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vida_Coberturas_vd}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
 				<reportElement x="395" y="0" width="79" height="20" uuid="ad87a88b-0d5d-403e-a445-980ae7dcb2c4"/>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vida_EstadoPoliza_vd}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
 				<reportElement x="474" y="0" width="79" height="20" uuid="fbdb932e-1ea0-4e51-9325-988787fbcc2a"/>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tbl_vida_FechaFin_vd}]]></textFieldExpression>

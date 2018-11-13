@@ -525,7 +525,7 @@ public class Consultas {
        modelo1.addColumn("Estado");
     
 
-       String sql ="SELECT * FROM tbl_cobros_vhl WHERE IdPolizaVhl_cbrvhl="+nopol+"";
+       String sql ="SELECT * FROM tbl_cobros_vhl WHERE NoPoliza_cbr="+nopol+"";
        String datos[] = new String[8];
        Statement st;
         try {

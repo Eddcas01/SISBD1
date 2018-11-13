@@ -32,9 +32,10 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="EQUIPO" min="-2" pref="1532" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -297,7 +298,7 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="ELIMINACION"/>
+                    <Property name="text" type="java.lang.String" value="ELIMINAR"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder/>
@@ -317,7 +318,7 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="MODIFICACION"/>
+                    <Property name="text" type="java.lang.String" value="MODIFICAR"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder/>
@@ -1566,15 +1567,13 @@
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="COMBO_EE" min="-2" pref="179" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="594" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="COMBO_EE" min="-2" pref="179" max="-2" attributes="0"/>
                                           <Component id="CGMLimpiarBtn" min="-2" pref="179" max="-2" attributes="0"/>
                                       </Group>
+                                      <EmptySpace min="-2" pref="594" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="168" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="CGM2VolverBtn2" min="-2" pref="222" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="270" max="-2" attributes="0"/>
                           </Group>
@@ -1937,7 +1936,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="VER COBROS Y ASEGURADOS"/>
+                <Property name="text" type="java.lang.String" value="VER COBROS "/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CV2CoberturasyCobBtn1ActionPerformed"/>

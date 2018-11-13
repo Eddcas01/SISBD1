@@ -1044,7 +1044,7 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         jLabel77.setFont(new java.awt.Font("Segoe UI Historic", 1, 31)); // NOI18N
         jLabel77.setForeground(new java.awt.Color(0, 0, 0));
         jLabel77.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel77.setText("MODIFICACION");
+        jLabel77.setText("MODIFICAR");
         jLabel77.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel78.setBackground(new java.awt.Color(0, 0, 51));
@@ -1333,12 +1333,12 @@ DefaultTableModel modelo1 = new DefaultTableModel();
         TBLC_COBROS.setShowVerticalLines(false);
         TBLC_COBROS.getTableHeader().setReorderingAllowed(false);
         TBLC_COBROS.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 TBLC_COBROSAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         TBLC_COBROS.addMouseListener(new java.awt.event.MouseAdapter() {

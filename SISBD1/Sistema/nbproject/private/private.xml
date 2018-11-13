@@ -3,12 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/gganp/Desktop/U6/GitHub/SISBD1/SISBD1/Sistema/src/Manejadora/PRINCIPAL.java</file>
-            <file>file:/C:/Users/gganp/Desktop/U6/GitHub/SISBD1/SISBD1/Sistema/src/Manejadora/CATALOGO.java</file>
-            <file>file:/C:/Users/gganp/Desktop/U6/GitHub/SISBD1/SISBD1/Sistema/src/Manejadora/CONTACTO.java</file>
-            <file>file:/C:/Users/gganp/Desktop/U6/GitHub/SISBD1/SISBD1/Sistema/src/Manejadora/COBROS.java</file>
-            <file>file:/C:/Users/gganp/Desktop/U6/GitHub/SISBD1/SISBD1/Sistema/src/Manejadora/RECLAMOS.java</file>
-            <file>file:/C:/Users/gganp/Desktop/U6/GitHub/SISBD1/SISBD1/Sistema/src/Base_de_Datos/Ingresos.java</file>
+            <file>file:/C:/Users/gganp/Desktop/U6/GitHub/SISBD1/SISBD1/Sistema/src/Manejadora/USUARIOS.java</file>
+            <file>file:/C:/Users/gganp/Desktop/U6/GitHub/SISBD1/SISBD1/Sistema/src/Manejadora/VEHICULOS.java</file>
+            <file>file:/C:/Users/gganp/Desktop/U6/GitHub/SISBD1/SISBD1/Sistema/src/Base_de_Datos/Consultas.java</file>
         </group>
     </open-files>
 </project-private>
